@@ -70,6 +70,10 @@ ul li:hover {
 	display: none;
 }
 
+.sub_menu_asso {
+	display: none;
+}
+
 .superposition {
 	display: flex;
 	flex-direction: column;
@@ -140,4 +144,9 @@ h1 {
 		width: 100%;
 		height: 100%;
 	}
+
+	.sub_menu_asso {
+		display: none;
+	}
+
 }
