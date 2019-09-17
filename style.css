@@ -12,23 +12,24 @@ header {
 
 }
 
-nav {
-	background-color: #C9FF90;
-}
 
 .ul_nav {
+	background-color: #C9FF90;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
 }
 
 .menu_icon {
-	list-style: none;
 	width: 80px;
 	height: 80px;
 }
 
-.menu_icon:hover {
+.menu li, .ul_nav li {
+	list-style: none;
+}
+
+.menu li:hover {
 	background-color: #FFC990;
 	cursor: pointer;
 }
@@ -82,10 +83,10 @@ nav {
 	display: flex;
 	flex-direction: column;
 	position: absolute;
-	background-color: yellow;
-	top: 30vh;
-	left: 30vw;
-	width: 40vw;
+	background: linear-gradient(#C9FF90, white);
+	top: 0;
+	left: calc(80px + (100vw - 80px) /3 );
+	width: calc( (100vw - 80px) / 3) ;
 	height: 40vh;
 	justify-content: space-between;
 	align-items: center;
@@ -195,7 +196,7 @@ summary:hover {
     cursor: pointer;
 }
 
-.ulCollecte, li, p {
+.ulCollecte, .spanVilles {
     margin-top: 10px;
 }
 
@@ -213,7 +214,7 @@ details {
     margin: 10px;
 }
 
-ul, li {
+.ulCollecte, .spanVilles {
     list-style: none;
     margin: 5px;
 }
@@ -263,10 +264,10 @@ hr {
 		display: flex;
 		flex-direction: column;
 		position: absolute;
-		background-color: yellow;
-		top: 30vh;
-		left: 30vw;
-		width: 40vw;
+		background: linear-gradient(#C9FF90, white);
+		top: 0;
+		left: 40px;
+		width: calc(100vw - 40px);
 		height: 40vh;
 		justify-content: space-between;
 		align-items: center;
