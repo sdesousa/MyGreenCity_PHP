@@ -8,7 +8,7 @@
       content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
         <title>My green city</title>
         <meta name="author" content="Quentin LIGER, Léo ADAM, Dimitri GILLE, Adrien MINICILLI, Sylvain DE SOUSA">
-        <meat name="description" content="A modern and ecological city">
+        <meta name="description" content="A modern and ecological city">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="style.css">
     </head>
@@ -19,16 +19,24 @@
             <nav>
                 <ul>
                     <li class="menu_icon"> <img src="images/menu_icon.jpg" alt="menu"> </li>
-                    <div class="menu">
+                    <div class="menu" id="link_burger" >
                         <li> <a href="#link_actions"> Actions </a></li>
                         <li> <a href="#link_associations"> Associations </a></li>
                         <li> <a href="#link_dechets"> Dechets </a> </li>
                     </div>
+                    <li> <a  class="burger" href="#link_burger"> <img src="images/burger.svg" alt="menu"> </a> </li>
                 </ul>
             </nav>
+            <ul class="sub_menu_asso">
+                <li> <a href="#link_associations"> Associations </a> </li>
+                <li> <a href="asso1.html"> </a></li>
+                <li> <a href="asso2.html"> </a></li>
+                <li> <a href="asso3.html"> </a></li>
+            </ul>
             <div class="superposition">
                 <h1> My green city </h1>
-                <img class="banner" src="images/banner_d.jpg" alt="My green city banner">
+                <img class="banner_d" src="images/banner_d.jpg" alt="My green city banner">
+                <img class="banner_m" src="images/banner_m.jpg" alt="My green city banner">
             </div>
 
         </header>
