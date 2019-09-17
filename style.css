@@ -108,9 +108,24 @@ h1 {
 
 @media only screen and (max-width: 961px) {
 
+	header {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100vw;
+	}
+
+	nav {
+
+	}
+
+	.ul_menu {
+
+	}
+
 	.menu_icon {
+		order: 1;
 		width: 40px;
-		height: 40px;
 	}
 
 	.menu {
@@ -118,12 +133,26 @@ h1 {
 	}
 
 	.burger {
-		display: flex;
+		order: 3;
+		width: 40px;
 	}
 
-	.burger a {
-		display: flex;
-		justify-content: center;
+	.superposition {
+
 	}
-	
+
+	h1 {
+		order: 2;
+		width: calc(100vw - 40px -40px);
+	}
+
+	.banner_d {
+		display: none;
+	}
+
+	.banner_m {
+		width: 100px;
+
+	}
+
 }
