@@ -5,7 +5,7 @@
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
         <title>My Green City</title>
         <meta name="author" content="Noms" >
-        <meta name="description" content="Description"
+        <meta name="description" content="Description">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Manjari" rel="stylesheet">
     </head>
@@ -34,13 +34,44 @@
         </section>
 
         <!-- Section Formulaire -->
+        
         <section>
-
+            <h2>CONTACT</h2>
+            <form action="" method="post">
+                <div  class="form">
+                    <div class="name">
+                        <label for="name">NOM</label>
+                        <input type="text" id="name" name="user_name">                    
+                    </div>
+                    <div class="email">  
+                        <label for="mail">EMAIL</label>          
+                        <input type="email" id="mail" name="user_mail">
+                    </div>
+                    <div class="textarea">
+                        <label for="msg">MESSAGE</label>
+                        <textarea id="msg" name="user_message"></textarea>                        
+                    </div>   
+                </div>
+                <div  class="button">
+                    <button type="submit">Envoyer</button>
+                </div>
+            </form>
         </section>
 
         <!-- Footer -->
-        <footer>
 
+        <footer class="footer">
+            <div class="column">
+                <a href="">CGU</a>
+                <a href="">FAQ</a>
+            </div>
+            <div class="copyright">
+                <p>© 2019 | Sylvain, Quentin, Léo, Adrien et Dimitri</p>
+            </div>
+            <div class="column">
+                <a href="#top"><img src="images/to_top.png" alt="fleche retour vers le haut de page"></a>
+                <p>Retour en haut</p>          
+            </div>
         </footer>
     </body>
 </html>
