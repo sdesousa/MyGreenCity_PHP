@@ -103,7 +103,7 @@ nav {
     align-items: center;
     width: 100vw;
     height: 568px;
-    background: url("images/banner.jpg") no-repeat center fixed;
+    background: url("images/banner.jpg") no-repeat center;
     background-size: cover;
 }
 
