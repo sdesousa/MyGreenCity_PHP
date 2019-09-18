@@ -137,7 +137,7 @@ nav {
 	top: 0;
 	left: calc(80px + (100vw - 80px) /3 );
 	width: calc( (100vw - 80px) / 3) ;
-	height: 40vh;
+	height: 400px;
 	justify-content: space-between;
 	align-items: center;
 	z-index: 2;
@@ -518,11 +518,11 @@ nav {
 			display: flex;
 			flex-direction: column;
 			position: absolute;
-			background-color: rgb(80, 80, 80);
+			background-color: rgb(80, 80, 80, .8);
 			top: 0;
 			left: 40px;
 			width: calc(100vw - 40px - 40px);
-			height: 20vh;
+			height: 160px;
 			justify-content: space-between;
 			align-items: center;
 			z-index: 2;
@@ -530,7 +530,7 @@ nav {
 		}
         .close_burger:first-child {
     		display: flex;
-    		width: 100ù;
+    		width: 100%;
     	}
 
     	.close_burger img {
@@ -550,21 +550,6 @@ nav {
     	.sub_menu_asso a, .menu a {
     		font-size: 1.5rem;
     	}
-
-		.menu:target {
-			display: flex;
-			flex-direction: column;
-			position: absolute;
-			background-color: rgba(80, 80, 80, .8);
-			top: 0;
-			left: 40px;
-			width: calc(100vw - 40px - 40px);
-			height: 160px;
-			justify-content: space-between;
-			align-items: center;
-			z-index: 2;
-
-		}
 
 		.superposition {
 			display: flex;
