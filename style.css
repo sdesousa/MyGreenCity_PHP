@@ -407,12 +407,9 @@ nav {
 	}
 
 	.secAssociations{	
-		height: 700px;
-	}
-
-	.associations{	
+		height: 800px;
 		background-color: rgb(164, 230, 99, .5);
-		padding-top: 4vh;
+		padding: 20px;
 	}
 
 	.assosLinks{
