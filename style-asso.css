@@ -6,26 +6,263 @@
 }
 
 body {
-	background-color: rgb(250, 250, 250);
+    background-color: rgb(250, 250, 250);
 }
 
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
-h1 {
+@font-face {
+    font-family: "Aquatico";
+    src: url("polices/Aquatico-Regular.otf");
+}
+
+h2 { 
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120px;
-    font-size: 40px;
+    font-family: "Aquatico";
+    color: rgb(51, 51, 51);
+    height: 80px;
+    font-size: 50px;
 }
 
-h2 {	
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100px;
-	font-size: 30px;
-	padding-top: 50px;
+/* Section Header-Nav */
+header {
+    display: flex;
+    flex-direction: column;
+
+}
+
+nav {
+    background-color: rgba(80, 80, 80, .8);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.menu_icon_link {
+    width: 80px;
+    height: 80px;
+}
+
+.menu_icon {
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    width: calc(100vw - 80px);
+    height: 80px;
+}
+
+.menu a {
+    width: 33.33%;
+    color: rgb(237, 245, 240);
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu a:hover {
+    background-color: rgb(33, 191, 43, .9);
+    cursor: pointer;
+    transition-duration: 0.6s;
+}
+
+.burger {
+    display: none;
+}
+
+.close_burger:first-child {
+    display: none;
+    width: 0;
+}
+
+.close_burger {
+    display: none;
+}
+
+.close img {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+}
+
+.sub_menu_asso {
+    display: none;
+}
+
+.sub_menu_asso:target {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgb(80, 80, 80);
+    top: 0;
+    left: calc(80px + (100vw - 80px) /3 );
+    width: calc( (100vw - 80px) / 3) ;
+    height: 40vh;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.sub_menu_asso a {
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub_menu_asso a:hover {
+    background-color: rgb(33, 191, 43, .9);
+    cursor: pointer;
+    transition-duration: 0.6s;
+}
+
+/* Section Footer */
+.footer{
+background-image: url(images/herbe.png);
+display: flex;
+height: 180px;
+justify-content: space-around;
+align-items: center;
+}
+
+.footer div{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.column{
+width: 15%;
+display: flex;
+align-items: center;
+}
+
+.column img{
+width: 50px;
+height: 50px;
+}
+
+.copyright{
+display: flex;
+align-self: flex-end;
+}
+
+.footer p{
+color: rgb(255, 255, 255);
+text-shadow: black 1px 1px, black 1px -1px, black -1px 1px, black -1px -1px;
+font-weight: bold;
+font-size: 1.1em;
+}
+
+.footer a{
+text-decoration: none;
+font-weight: bold;
+color: rgb(255, 255, 255);
+text-shadow: black 1px 1px, black 1px -1px, black -1px 1px, black -1px -1px;
+font-size: 1.1em;
+}
+
+
+@media only screen and (max-width: 961px) {
+
+
+        .menu_icon_link {
+            width: 40px;
+            height: 40px;
+        }
+
+        .menu_icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .menu, .close {
+            display: none;
+        }
+
+        .burger {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .burger img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .menu:target {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            background-color: rgb(80, 80, 80,);
+            top: 0;
+            left: 40px;
+            width: calc(100vw - 40px - 40px);
+            height: 20vh;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+
+        }
+        .close_burger:first-child {
+            display: flex;
+            width: 100ù;
+        }
+
+        .close_burger img {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: calc(50% - 20px);
+            width: 40px;
+            height: 40px;
+            z-index: 2;
+        }
+
+        .sub_menu_asso {
+            display: none;
+        }
+
+        .sub_menu_asso a, .menu a {
+            font-size: 1.5rem;
+        }
+
+        .menu:target {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            background-color: rgba(80, 80, 80, .8);
+            top: 0;
+            left: 40px;
+            width: calc(100vw - 40px - 40px);
+            height: 160px;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+        }
+        
 }
