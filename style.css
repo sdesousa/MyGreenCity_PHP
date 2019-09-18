@@ -17,7 +17,7 @@ header {
 }
 
 nav {
-	background-color: #C9FF90;
+	background-color: rgba(164, 230, 99, .5);
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
@@ -85,7 +85,7 @@ nav {
 	display: flex;
 	flex-direction: column;
 	position: absolute;
-	background: linear-gradient(#C9FF90, white);
+	background: linear-gradient(#CEEFAD, white);
 	top: 0;
 	left: calc(80px + (100vw - 80px) /3 );
 	width: calc( (100vw - 80px) / 3) ;
@@ -333,7 +333,7 @@ hr {
 		display: flex;
 		flex-direction: column;
 		position: absolute;
-		background: linear-gradient(#C9FF90, white);
+		background: linear-gradient(#CEEFAD, white);
 		top: 0;
 		left: 40px;
 		width: calc(100vw - 40px - 40px);
@@ -359,7 +359,7 @@ hr {
 		height: 40px;
 		justify-content: center;
 		align-items: center;
-		background: #C9FF90;
+		background: #CEEFAD;
 	}
 
 	h1 {
