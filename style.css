@@ -14,25 +14,26 @@ html {
 }
 
 @font-face {
-	font-family: "Aroma";
-	src: url("polices/AROMA-Light.ttf");
+	font-family: "Aquatico";
+	src: url("polices/Aquatico-Regular.otf");
 }
 
 h1 {
-	font-size: 12em;
+	font-size: 8em;
 	color: red;
 	font-weight: bolder;
 	font-style: oblique;
-	font-family: "Aroma";
-	z-index: 1;
+	font-family: "Aquatico";
+
 }
 
 h2 {	
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-family: "Aroma";
-	height: 100px;
+	font-family: "Aquatico";
+	color: rgb(51, 51, 51);
+	height: 80px;
 	font-size: 50px;
 }
 
@@ -40,7 +41,8 @@ h3 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-family: "Aroma";
+	font-family: "Aquatico";
+	color: rgb(61, 61, 61);
 	height: 80px;
 	font-size: 35px;
 }
@@ -355,24 +357,138 @@ nav {
 	}
 
 
+/* Section Actions */
 
-	@media only screen and (max-width: 1300px) {
-
-		.conseils {
-			flex-direction:column;
-			align-items: center;
-			height: 750px;
-			margin: 0;
-		}
-
-		.textConseils {
-			margin-bottom: 20px;
-		}
+    .hrAction{
+	display: none;
 	}
 
-	@media only screen and (max-width: 961px) {
+
+	.secAction {
+		display: flex;
+		justify-content: space-between;
+		margin: 20px;
+	}
+
+	.actionTitle{
+		height: 3vh;	
+		margin-top: 1vh;
+		margin-bottom: 2vh;	
+	}
+
+	.action{
+		display: flex;
+		flex-direction: column;
+		width: 30%;
+	}
+
+
+	.actionpict{	
+		height: 320px;
+		width: 400px;	
+		border: 0.4em solid rgb(164, 230, 99, .5);
+		border-radius: 10px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 2vh;	
+	}
+
+	.actitle{
+		font-size: 2em;	
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: center;
+	}
+
+	.actdescrpt{	
+		font-size: 0.6em;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.associations{	
+		height: 600px;
+		background-color: rgb(164, 230, 99, .5);
+		padding-top: 4vh;
+	}
+
+	.photosassos{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-top: 6vh;
+	}
+
+	.asso1{
+		height: 400px;
+		width: 400px;	
+		border-radius: 10px;
+	}
+
+	.asso2{
+		height: 400px;
+		width: 400px;	
+		border-radius: 10px;
+	}
+
+	.asso3{
+		height: 400px;
+		width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 10px;
+	}
+
+
+@media only screen and (max-width: 1300px) {
+
+    .textConseils {
+        margin-bottom: 20px;
+    }
+
+    .secAction {
+    	display:flex;
+    	justify-content: space-around;
+    	flex-wrap: wrap;
+    }
+
+    .action {
+    	width: 450px;
+    	margin: 40px;
+    }
+
+    #action2 {
+    	order: 1;
+    }
+
+	.conseils {
+		flex-direction:column;
+		align-items: center;
+		height: 750px;
+		margin: 0;
+	}
+
+	.textConseils {
+		margin-bottom: 20px;
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+
+	.hrAction {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 961px) {
 
 		.menu_icon {
+			width: 40px;
+			height: 40px;
+		}
+
+		.menu_icon_link {
 			width: 40px;
 			height: 40px;
 		}
@@ -458,7 +574,7 @@ nav {
 			height: 40px;
 			justify-content: center;
 			align-items: center;
-			background: #C9FF90;
+			background: #CEEFAD;
 		}
 
 		h1 {
@@ -491,89 +607,4 @@ nav {
 		details {
 			text-align: center;
 		}
-
-	}
-
-/* Section Action-Association */
-
-
-	.actionpictures{
-		height: 360px;
-		display: flex;	
-		flex-direction: row;
-		justify-content: space-around;
-		margin-top: 4vh;	
-	}
-
-	.action1{
-		height: 320px;
-		width: 400px;	
-		border: 0.4em solid rgb(164, 230, 99, .5);
-		border-radius: 10px;	
-	}
-
-	.action2{
-		height: 320px;
-		width: 400px;	
-		border-radius: 10px;
-		border: 0.4em solid rgb(164, 230, 99, .5);
-	}
-
-	.action3{
-		height: 320px;
-		width: 400px;	
-		border-radius: 10px;
-		border: 0.4em solid rgb(164, 230, 99, .5);
-	}
-
-	.actionstitles{
-		height: 40vh;
-		font-family: Manjari;
-		font-size: 2em;
-		display: flex;	
-		flex-direction: row;
-		justify-content: space-around;	
-	}
-
-	.actitle{
-		width: 30%;
-		text-align: center;
-	}
-
-	.actdescrpt{
-		font-size: 0.6em;
-	}
-
-	.associations{	
-		height: 700px;
-		background-color: rgb(164, 230, 99, .5);
-		padding-top: 4vh;
-	}
-
-	.photosassos{
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-		margin-top: 6vh;
-	}
-
-	.asso1{
-		height: 400px;
-		width: 400px;	
-		border-radius: 10px;
-	}
-
-	.asso2{
-		height: 400px;
-		width: 400px;	
-		border-radius: 10px;
-	}
-
-	.asso3{
-		height: 400px;
-		width: 400px;
-		margin-left: auto;
-		margin-right: auto;
-		border-radius: 10px;
-	}
-
+}
