@@ -57,7 +57,6 @@ h3 {
 header {
 	display: flex;
 	flex-direction: column;
-
 }
 
 nav {
@@ -221,7 +220,7 @@ nav {
 /* Section Footer */
 
   .footer{
-    background-image: url(images/herbe.png);
+    background-color: rgb(80, 80, 80);
     display: flex;
     height: 180px;
     justify-content: space-around;
@@ -365,17 +364,10 @@ nav {
 	display: none;
 	}
 
-
 	.secAction {
 		display: flex;
 		justify-content: space-between;
 		margin: 20px;
-	}
-
-	.actionTitle{
-		height: 3vh;	
-		margin-top: 1vh;
-		margin-bottom: 2vh;	
 	}
 
 	.action{
@@ -385,18 +377,14 @@ nav {
 	}
 
 
-	.actionpict{	
-		height: 320px;
-		width: 400px;	
-		border: 0.4em solid rgb(164, 230, 99, .5);
-		border-radius: 10px;
+	.actionpict{
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 2vh;	
 	}
 
 	.actitle{
-		font-size: 2em;	
+		font-size: 2em;
 		width: 100%;
 		margin-right: auto;
 		margin-left: auto;
