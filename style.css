@@ -61,7 +61,7 @@ header {
 }
 
 nav {
-	background-color: rgba(80, 80, 80, .8);
+	background-color: rgba(80, 80, 80);
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
@@ -530,7 +530,7 @@ nav {
 			display: flex;
 			flex-direction: column;
 			position: absolute;
-			background-color: rgb(80, 80, 80,);
+			background-color: rgb(80, 80, 80);
 			top: 0;
 			left: 40px;
 			width: calc(100vw - 40px - 40px);
