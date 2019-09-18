@@ -112,14 +112,12 @@ h1 {
 	color: red;
 	font-weight: bolder;
 	z-index: 1;
-}
 
-h2 {
+h2 {	
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
-    font-size: 30px;
+    height: 60px;
 }
 
 h3 {
@@ -394,4 +392,87 @@ hr {
         text-align: center;
     }
 
+}
+
+.actionpictures{
+	height: 360px;
+	display: flex;	
+	flex-direction: row;
+	justify-content: space-around;
+	margin-top: 4vh;	
+}
+.action1{
+	height: 320px;
+	width: 400px;	
+	border: 0.4em solid rgb(164, 230, 99, .5);
+	border-radius: 10px;	
+}
+.action2{
+	height: 320px;
+	width: 400px;	
+	border-radius: 10px;
+	border: 0.4em solid rgb(164, 230, 99, .5);
+}
+.action3{
+	height: 320px;
+	width: 400px;	
+	border-radius: 10px;
+	border: 0.4em solid rgb(164, 230, 99, .5);
+}
+.actionstitles{
+	height: 40vh;
+	font-family: Manjari;
+	font-size: 2em;
+	display: flex;	
+	flex-direction: row;
+	justify-content: space-around;	
+}
+.actitle1{
+	width: 30%;
+	text-align: center;
+}
+.actitle2{
+	width: 30%;
+	text-align: center;
+}
+.actitle3{
+	width: 30%;
+	text-align: center;	
+}
+.act1descrpt{
+	font-size: 0.6em;
+}
+.act2descrpt{
+	font-size: 0.6em;
+}
+.act3descrpt{
+	font-size: 0.6em;
+}
+.associations{	
+	height: 600px;
+	background-color: rgb(164, 230, 99, .5);
+	padding-top: 4vh;
+}
+.photosassos{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-top: 6vh;
+}
+.asso1{
+	height: 400px;
+	width: 400px;	
+	border-radius: 10px;
+}
+.asso2{
+	height: 400px;
+	width: 400px;	
+	border-radius: 10px;
+}
+.asso3{
+	height: 400px;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
 }
