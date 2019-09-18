@@ -18,6 +18,11 @@ html {
 	src: url("polices/Aquatico-Regular.otf");
 }
 
+@font-face {
+	font-family: "Rustico";
+	src: url("polices/Rustico-V2-Regular.otf");
+}
+
 h1 {
 	font-size: 8em;
 	font-weight: bolder;
@@ -30,16 +35,26 @@ h1 {
 .Green {
 	font-size: 1.2em;
 	color: rgb(18, 150, 18);
+	font-family: "Rustico"
 }
 
 h2 {	
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	text-align: center;
 	font-family: "Aquatico";
 	color: rgb(51, 51, 51);
-	height: 80px;
+	height: 120px;
+	margin: 20px;
+	margin-top: 125px;
 	font-size: 50px;
+}
+
+h2::after {
+	content: "";
+	height: 0.4rem;
+	width: 5rem;
+	display: block;
+	margin: 25px auto 1rem;
+	background:  rgb(18, 150, 18);
 }
 
 h3 {
@@ -100,7 +115,7 @@ nav {
 .menu a:hover {
 	background-color: rgb(33, 191, 43, .9);
 	cursor: pointer;
-	transition-duration: 0.6s;
+	transition-duration: 0.4s;
 }
 
 .burger {
@@ -144,7 +159,7 @@ nav {
 }
 
 .sub_menu_asso a {
-	color: black;
+	color: rgb(237, 245, 240);
 	text-decoration: none;
 	font-size: 2rem;
 	font-weight: bold;
@@ -194,7 +209,7 @@ nav {
   }
 
   .textarea textarea{
-    height: 80px;
+    height: 150px;
   }
 
   .button{
@@ -206,7 +221,7 @@ nav {
   
   .button button{
     border-radius: 12px 0 12px 0;
-    background: rgb(7, 129, 7);
+    background: rgb(18, 150, 18);
     border: none;
     cursor: pointer;
     font-size: 1.2em;
@@ -220,11 +235,12 @@ nav {
 /* Section Footer */
 
   .footer{
-    background-color: rgb(80, 80, 80);
+    background-color: #424952;
     display: flex;
-    height: 180px;
     justify-content: space-around;
-    align-items: center;
+	align-items: center;
+	height: 180px;
+	border-top: 15px solid rgb(18, 150, 18);
   }
   
   .footer div{
@@ -251,7 +267,6 @@ nav {
   
   .footer p{
     color: rgb(255, 255, 255);
-    text-shadow: black 1px 1px, black 1px -1px, black -1px 1px, black -1px -1px;
     font-weight: bold;
     font-size: 1.1em;
   }
@@ -260,7 +275,6 @@ nav {
     text-decoration: none;
     font-weight: bold;
     color: rgb(255, 255, 255);
-    text-shadow: black 1px 1px, black 1px -1px, black -1px 1px, black -1px -1px;
 	font-size: 1.1em;
   }
 
@@ -398,9 +412,9 @@ nav {
 	}
 
 	.secAssociations{	
-		height: 800px;
-		background-color: rgb(164, 230, 99, .5);
-		padding: 20px;
+		height: 900px;
+		background-color: rgb(164, 230, 99, .8);
+		padding: 10px;
 	}
 
 	.assosLinks{
@@ -571,6 +585,10 @@ nav {
 			font-weight: bolder;
 			z-index: 1;
 			text-align: center;
+		}
+
+		.secCollecte {
+			height: 850px;
 		}
 
 		.pointsCollecte {
