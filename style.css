@@ -54,7 +54,7 @@ h2::after {
 	width: 5rem;
 	display: block;
 	margin: 25px auto 1rem;
-	background:  rgb(18, 150, 18);
+	background: rgb(18, 150, 18);
 }
 
 h3 {
@@ -91,6 +91,10 @@ nav {
 	height: 100%;
 }
 
+.menu_icon:hover {
+	opacity: 0.6;
+}
+
 .menu {
 	display: flex;
 	flex-direction: row;
@@ -113,7 +117,7 @@ nav {
 }
 
 .menu a:hover {
-	background-color: rgb(33, 191, 43, .9);
+	background-color: rgb(100, 100, 100, .9);
 	cursor: pointer;
 	transition-duration: 0.4s;
 }
@@ -381,6 +385,7 @@ nav {
 	.secAction {
 		display: flex;
 		justify-content: space-between;
+		height: 700px;
 		margin: 20px;
 	}
 
@@ -411,9 +416,9 @@ nav {
 		margin-left: auto;
 	}
 
-	.secAssociations{	
-		height: 1200px;
-		background-color: rgb(164, 230, 99, .8);
+	.secAssociations{
+		height: 1200px;		
+		background-color: rgb(200, 200, 200, .8);
 		padding: 10px;
 	}
 
