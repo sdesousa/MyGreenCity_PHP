@@ -54,7 +54,7 @@ h2::after {
 	width: 5rem;
 	display: block;
 	margin: 25px auto 1rem;
-	background:  rgb(18, 150, 18);
+	background: rgb(18, 150, 18);
 }
 
 h3 {
@@ -85,6 +85,10 @@ nav {
 	height: 100%;
 }
 
+.menu_icon:hover {
+	opacity: 0.6;
+}
+
 .menu {
 	display: flex;
 	width: calc(100vw - 80px);
@@ -105,14 +109,8 @@ nav {
 	align-items: center;
 }
 
-.menu a:first-child {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 .menu a:hover {
-	background-color: rgb(33, 191, 43, .9);
+	background-color: rgb(100, 100, 100, .9);
 	cursor: pointer;
 	transition-duration: 0.4s;
 }
@@ -250,9 +248,13 @@ nav {
   }
   
   .column{
-    width: 15%;
+    width: 20%;
     display: flex;
     align-items: center;
+  }
+
+  .column a{
+	  margin-bottom: 5px;
   }
 
   .column img{
@@ -260,22 +262,49 @@ nav {
     height: 50px;
   }
   
-  .copyright{
+  .footer_central{
     display: flex;
-    align-self: flex-end;
+	align-self: flex-end;
+  }
+
+  .footer_central a{
+	margin: 0 5px;
+	justify-content: center;
+  }
+
+  .copyright{
+	  display: flex;
+	  justify-content: center;
   }
   
   .footer p{
     color: rgb(255, 255, 255);
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.3em;
+  }
+
+  .footer_menu{
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-around;
+	  margin-bottom: 50px;
   }
 
   .footer a{
-    text-decoration: none;
+	text-decoration: none;
     font-weight: bold;
     color: rgb(255, 255, 255);
 	font-size: 1.1em;
+  }
+
+  .column .reseaux{
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+  }
+
+  .column .reseaux a{
+	  margin: 8px;
   }
 
 
@@ -381,6 +410,7 @@ nav {
 	.secAction {
 		display: flex;
 		justify-content: space-between;
+		height: 700px;
 		margin: 20px;
 	}
 
@@ -411,28 +441,63 @@ nav {
 		margin-left: auto;
 	}
 
-	.secAssociations{	
-		height: 900px;
-		background-color: rgb(164, 230, 99, .8);
+	.secAssociations{
+		height: 1200px;		
+		background-color: rgb(200, 200, 200, .8);
 		padding: 10px;
 	}
 
 	.assosLinks{
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-around;
+		align-items: center;
 		margin-top: 6vh;
-		text-align: center;
 		font-size: 1.6em;
 		margin-bottom: 2vh;
+
 	}
 
-	.assPict{
-		height: 400px;
-		width: 400px;
-		border: 4px solid white;	
-		border-radius: 10px;
+	.divAssPict {
+		text-align: center;		
+		height: 380px;
+		width: 30%;		
 	}
+
+	.assPict {
+		height: 200px;
+		width: 300px;
+		border: 4px solid green;	
+		border-radius: 10px;
+		margin-top: 50px;
+		padding-bottom: 20px;
+		padding-top: 20px;
+		background-color: white;
+	}
+
+	.asso2Pict {
+		height: 200px;
+		width: 300px;
+		border: 4px solid green;	
+		border-radius: 10px;
+		padding-left: 8px;
+		padding-right: 8px;
+		background-color: white;
+		margin-top: 50px;		
+	}
+	.asso3Pict {
+		height: 300px;
+		width: 300px;
+		border: 4px solid green;	
+		border-radius: 10px;			
+	}
+
+	.assgpe2 {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
 	.assosNames{
 		margin-top: 1vh;		
 	}
