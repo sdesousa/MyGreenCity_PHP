@@ -454,7 +454,6 @@ nav {
 		margin-top: 6vh;
 		font-size: 1.6em;
 		margin-bottom: 2vh;
-
 	}
 
 	.divAssPict {
@@ -666,5 +665,33 @@ nav {
 
 		details {
 			text-align: center;
+		}
+
+		.assosLinks {
+			display: flex;
+			flex-direction: column;			
+			margin-top: 2vh;
+			font-size: 1.6em;
+			margin-bottom: 2vh;
+		}
+
+		.secAssociations{
+			height: 80vh;		
+			background-color: rgb(200, 200, 200, .8);
+			padding: 10px;
+		}
+
+		.divAssPict {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			text-align: center;	
+			height: 300px;
+			width: 34%;	
+			margin-bottom: 2vh;	
+		}
+		
+		.secAction {
+			height: 2470px;
 		}
 }
