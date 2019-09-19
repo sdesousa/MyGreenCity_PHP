@@ -102,14 +102,40 @@ nav {
 	width: 33.33%;
 	color: rgb(237, 245, 240);
 	width: 100%;
-	height: 100%;
+	height: 80px;
 	text-decoration: none;
 	font-size: 2.5rem;
 	font-weight: bold;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	/*align-self: center;
+	align-content: center;
+	display: inline-block;
+	line-height: 80px;
+	text-align: center;
+	vertical-align: bottom*/
+}
 
+.menu a p {
+	height: 80px;
+	width: 100%;
+	text-align: center;
+	line-height: 80px;
+}
+
+.testmiddle {
+	position: absolute;
+	color: blue;
+	top: 40px;
+	margin: 0;
+	padding: 0;
+}
+
+.menu a:first-child {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .menu a:hover {
@@ -581,10 +607,15 @@ nav {
 		h1 {
 			width: 100%;
 			height: 100%;
-			font-size: 2em;
+			font-size: 1.6em;
 			font-weight: bolder;
 			z-index: 1;
 			text-align: center;
+		}
+
+		.green {
+			height: 40px;
+			font-size: 1.2em;
 		}
 
 		.secCollecte {
