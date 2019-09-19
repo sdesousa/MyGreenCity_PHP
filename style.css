@@ -18,9 +18,13 @@ html {
 	src: url("polices/Aquatico-Regular.otf");
 }
 
+@font-face {
+	font-family: "Rustico";
+	src: url("polices/Rustico-V2-Regular.otf");
+}
+
 h1 {
 	font-size: 8em;
-	color: red;
 	font-weight: bolder;
 	font-style: oblique;
 	font-family: "Aquatico";
@@ -31,16 +35,26 @@ h1 {
 .Green {
 	font-size: 1.2em;
 	color: rgb(18, 150, 18);
+	font-family: "Rustico"
 }
 
 h2 {	
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	text-align: center;
 	font-family: "Aquatico";
 	color: rgb(51, 51, 51);
-	height: 80px;
+	height: 120px;
+	margin: 20px;
+	margin-top: 125px;
 	font-size: 50px;
+}
+
+h2::after {
+	content: "";
+	height: 0.4rem;
+	width: 5rem;
+	display: block;
+	margin: 25px auto 1rem;
+	background: rgb(18, 150, 18);
 }
 
 h3 {
@@ -55,17 +69,10 @@ h3 {
 
 /* Section Header-Nav */
 
-header {
-	display: flex;
-	flex-direction: column;
-
-}
-
 nav {
-	background-color: rgba(80, 80, 80, .8);
+	background-color: rgba(80, 80, 80);
 	display: flex;
 	justify-content: space-between;
-	flex-direction: row;
 }
 
 .menu_icon_link {
@@ -78,9 +85,12 @@ nav {
 	height: 100%;
 }
 
+.menu_icon:hover {
+	opacity: 0.6;
+}
+
 .menu {
 	display: flex;
-	flex-direction: row;
 	width: calc(100vw - 80px);
 	height: 80px;
 }
@@ -89,33 +99,33 @@ nav {
 	width: 33.33%;
 	color: rgb(237, 245, 240);
 	width: 100%;
-	height: 100%;
+	height: 80px;
 	text-decoration: none;
+	font-family: "Aquatico";
 	font-size: 2.5rem;
 	font-weight: bold;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 }
 
 .menu a:hover {
-	background-color: rgb(33, 191, 43, .9);
+	background-color: rgb(100, 100, 100, .9);
 	cursor: pointer;
-	transition-duration: 0.6s;
+	transition-duration: 0.4s;
 }
 
 .burger {
 	display: none;
 }
 
+.close_burger {
+	display: none;
+}
+
 .close_burger:first-child {
 	display: none;
 	width: 0;
-}
-
-.close_burger {
-	display: none;
 }
 
 .close img {
@@ -139,15 +149,16 @@ nav {
 	top: 0;
 	left: calc(80px + (100vw - 80px) /3 );
 	width: calc( (100vw - 80px) / 3) ;
-	height: 40vh;
+	height: 400px;
 	justify-content: space-between;
 	align-items: center;
 	z-index: 2;
 }
 
 .sub_menu_asso a {
-	color: black;
+	color: rgb(237, 245, 240);
 	text-decoration: none;
+	font-family: "Aquatico";
 	font-size: 2rem;
 	font-weight: bold;
 	width: 100%;
@@ -171,7 +182,7 @@ nav {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	height: 568px;
+	height: 765px;
 	background: url("images/greenbanner.jpg	") no-repeat center;
 	background-size: cover;
 }
@@ -196,22 +207,23 @@ nav {
   }
 
   .textarea textarea{
-    height: 80px;
+    height: 150px;
   }
 
   .button{
-    margin-bottom: 10px;
+    margin: 20px 0 50px 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
   
   .button button{
-    border-radius:12px 0 12px 0;
-    background: rgb(7, 129, 7);
-    border:none;
+    border-radius: 12px 0 12px 0;
+    background: rgb(18, 150, 18);
+    border: none;
+    cursor: pointer;
     font-size: 1.2em;
-    color:#fff;
+    color: #fff;
     padding:10px 20px;
     font-weight: bold;
     text-shadow: black 1px 1px, black 1px -1px, black -1px 1px, black -1px -1px;
@@ -221,11 +233,12 @@ nav {
 /* Section Footer */
 
   .footer{
-    background-image: url(images/herbe.png);
+    background-color: #424952;
     display: flex;
-    height: 180px;
     justify-content: space-around;
-    align-items: center;
+	align-items: center;
+	height: 180px;
+	border-top: 15px solid rgb(18, 150, 18);
   }
   
   .footer div{
@@ -235,9 +248,13 @@ nav {
   }
   
   .column{
-    width: 15%;
+    width: 20%;
     display: flex;
     align-items: center;
+  }
+
+  .column a{
+	  margin-bottom: 5px;
   }
 
   .column img{
@@ -245,24 +262,49 @@ nav {
     height: 50px;
   }
   
-  .copyright{
+  .footer_central{
     display: flex;
-    align-self: flex-end;
+	align-self: flex-end;
+  }
+
+  .footer_central a{
+	margin: 0 5px;
+	justify-content: center;
+  }
+
+  .copyright{
+	  display: flex;
+	  justify-content: center;
   }
   
   .footer p{
     color: rgb(255, 255, 255);
-    text-shadow: black 1px 1px, black 1px -1px, black -1px 1px, black -1px -1px;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.3em;
+  }
+
+  .footer_menu{
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-around;
+	  margin-bottom: 50px;
   }
 
   .footer a{
-    text-decoration: none;
+	text-decoration: none;
     font-weight: bold;
     color: rgb(255, 255, 255);
-    text-shadow: black 1px 1px, black 1px -1px, black -1px 1px, black -1px -1px;
 	font-size: 1.1em;
+  }
+
+  .column .reseaux{
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+  }
+
+  .column .reseaux a{
+	  margin: 8px;
   }
 
 
@@ -365,17 +407,11 @@ nav {
 	display: none;
 	}
 
-
 	.secAction {
 		display: flex;
 		justify-content: space-between;
+		height: 700px;
 		margin: 20px;
-	}
-
-	.actionTitle{
-		height: 3vh;	
-		margin-top: 1vh;
-		margin-bottom: 2vh;	
 	}
 
 	.action{
@@ -385,18 +421,14 @@ nav {
 	}
 
 
-	.actionpict{	
-		height: 320px;
-		width: 400px;	
-		border: 0.4em solid rgb(164, 230, 99, .5);
-		border-radius: 10px;
+	.actionpict{
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 2vh;	
 	}
 
 	.actitle{
-		font-size: 2em;	
+		font-size: 2em;
 		width: 100%;
 		margin-right: auto;
 		margin-left: auto;
@@ -409,28 +441,63 @@ nav {
 		margin-left: auto;
 	}
 
-	.secAssociations{	
-		height: 800px;
-		background-color: rgb(164, 230, 99, .5);
-		padding: 20px;
+	.secAssociations{
+		height: 1200px;		
+		background-color: rgb(200, 200, 200, .8);
+		padding: 10px;
 	}
 
 	.assosLinks{
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-around;
+		align-items: center;
 		margin-top: 6vh;
-		text-align: center;
 		font-size: 1.6em;
 		margin-bottom: 2vh;
+
 	}
 
-	.assPict{
-		height: 400px;
-		width: 400px;
-		border: 4px solid white;	
-		border-radius: 10px;
+	.divAssPict {
+		text-align: center;		
+		height: 380px;
+		width: 30%;		
 	}
+
+	.assPict {
+		height: 200px;
+		width: 300px;
+		border: 4px solid green;	
+		border-radius: 10px;
+		margin-top: 50px;
+		padding-bottom: 20px;
+		padding-top: 20px;
+		background-color: white;
+	}
+
+	.asso2Pict {
+		height: 200px;
+		width: 300px;
+		border: 4px solid green;	
+		border-radius: 10px;
+		padding-left: 8px;
+		padding-right: 8px;
+		background-color: white;
+		margin-top: 50px;		
+	}
+	.asso3Pict {
+		height: 300px;
+		width: 300px;
+		border: 4px solid green;	
+		border-radius: 10px;			
+	}
+
+	.assgpe2 {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
 	.assosNames{
 		margin-top: 1vh;		
 	}
@@ -474,7 +541,22 @@ nav {
 	}
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1108px) {
+
+	h1 {
+		font-size: 7em;
+	}
+
+	.hrAction {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 968px) {
+
+	h1 {
+		font-size: 5em;
+	}
 
 	.hrAction {
 		display: block;
@@ -515,11 +597,11 @@ nav {
 			display: flex;
 			flex-direction: column;
 			position: absolute;
-			background-color: rgb(80, 80, 80,);
+			background-color: rgb(80, 80, 80, .8);
 			top: 0;
 			left: 40px;
 			width: calc(100vw - 40px - 40px);
-			height: 20vh;
+			height: 160px;
 			justify-content: space-between;
 			align-items: center;
 			z-index: 2;
@@ -527,7 +609,7 @@ nav {
 		}
         .close_burger:first-child {
     		display: flex;
-    		width: 100ù;
+    		width: 100%;
     	}
 
     	.close_burger img {
@@ -545,23 +627,9 @@ nav {
 		}
 
     	.sub_menu_asso a, .menu a {
+    		font-family: "Aquatico";
     		font-size: 1.5rem;
     	}
-
-		.menu:target {
-			display: flex;
-			flex-direction: column;
-			position: absolute;
-			background-color: rgba(80, 80, 80, .8);
-			top: 0;
-			left: 40px;
-			width: calc(100vw - 40px - 40px);
-			height: 160px;
-			justify-content: space-between;
-			align-items: center;
-			z-index: 2;
-
-		}
 
 		.superposition {
 			display: flex;
@@ -579,10 +647,19 @@ nav {
 		h1 {
 			width: 100%;
 			height: 100%;
-			font-size: 2em;
+			font-size: 1.6em;
 			font-weight: bolder;
 			z-index: 1;
 			text-align: center;
+		}
+
+		.green {
+			height: 40px;
+			font-size: 1.2em;
+		}
+
+		.secCollecte {
+			height: 850px;
 		}
 
 		.pointsCollecte {

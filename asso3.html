@@ -6,10 +6,29 @@
         <title>My Green City - Les Paniers Bio du Val de Loire</title>
         <link rel="stylesheet" href="style-asso.css">
         <link href="https://fonts.googleapis.com/css?family=Manjari" rel="stylesheet">
+        <link rel="icon" type="image/png" href="images/green-v2.png" />
     </head>
     <body>
         <header>
-            <!-- Recopier header -->
+            <nav>
+                <a class="menu_icon_link" href="homepage.html"> <img class="menu_icon" src="images/green-v2.png" alt="menu"> </a>
+                <div class="menu" id="link_burger" >
+                    <a class="close_burger" href="#"> <img src="images/Close_icon.png" alt="close"> </a>
+                    <a href="homepage.html#link_actions"> ACTIONS </a>
+                    <a href="#sub_menu"> ASSOCIATIONS </a>
+                    <a href="homepage.html#link_dechets"> DECHETS </a>
+                </div>
+                <a class="burger" href="#link_burger"> <img src="images/burger.svg" alt="menu"> </a>
+                
+            </nav>
+
+            <div class="sub_menu_asso" id="sub_menu">
+                <a class="close" href="#"> <img src="images/Close_icon.png" alt="close"> </a>
+                <a href="homepage.html#link_associations">Les associations </a>
+                <a href="asso1.html"> Premiere association</a>
+                <a href="asso2.html"> Seconde association</a>
+                <a href="asso3.html"> Troisième association</a>
+            </div>
         </header>
         <section>
             <h1>Les Paniers Bio du Val de Loire</h1>
@@ -31,8 +50,19 @@
                 <p>Elle regroupe 50 producteurs de fruits et légumes biologique de la région Centre - Val de loire, plus de 40 fermes familiales bio, un etablessement et service d'aide par le travail et un partenariat avec des structures de l'economie sociale et solidaire.</p>
             </div>
         </section>
-        <footer>
-            <!-- Recopier Footer -->
+        <footer class="footer">
+            <div class="column">
+                <a href="http://www.mnle.fr/" target="_blank" title="Mouvement National de Lutte pour l'Environnement">MNLE</a>
+                <a href="http://www.loiret-nature-environnement.org/" target="_blank" title="Loiret Nature Environnement">LNE</a>
+                <a href="https://www.cen-centrevaldeloire.org/" target="_blank" title="Le Conservatoire d'Espaces Naturels Centre-Val de Loire">CEN CVL</a>
+            </div>
+            <div class="copyright">
+                <p>© 2019 | Sylvain, Quentin, Léo, Adrien et Dimitri</p>
+            </div>
+            <div class="column">
+                <a href="#top"><img src="images/to_top.png" alt="fleche retour vers le haut de page"></a>
+                <p>Retour en haut</p>          
+            </div>
         </footer>
     </body>
 </html>
