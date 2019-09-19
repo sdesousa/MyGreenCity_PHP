@@ -94,7 +94,7 @@ nav {
 }
 
 .menu a:hover {
-    background-color: rgb(100, 100, 100, .9);
+    background-color: rgba(250, 233, 233, 0.9);
     cursor: pointer;
     transition-duration: 0.4s;
 }
@@ -153,7 +153,7 @@ nav {
 }
 
 .sub_menu_asso a:hover {
-    background-color: rgb(33, 191, 43, .9);
+    background-color: rgba(100, 100, 100, .9);
     cursor: pointer;
     transition-duration: 0.6s;
 }
