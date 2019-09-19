@@ -238,17 +238,20 @@ nav {
 
   .footer{
     background-color: #424952;
-    display: flex;
-    justify-content: space-around;
-	align-items: center;
 	height: 180px;
 	border-top: 15px solid rgb(18, 150, 18);
   }
+
+  .footer_haut{
+	display: flex;
+    justify-content: space-around;
+	align-items: center;
+  }
   
-  .footer div{
+  .footer_haut div{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+	justify-content: space-between;
   }
   
   .column{
@@ -265,20 +268,11 @@ nav {
     width: 50px;
     height: 50px;
   }
-  
-  .footer_central{
-    display: flex;
-	align-self: flex-end;
-  }
-
-  .footer_central a{
-	margin: 0 5px;
-	justify-content: center;
-  }
 
   .copyright{
 	  display: flex;
 	  justify-content: center;
+	  align-self: flex-end;
   }
   
   .footer p{
@@ -292,6 +286,11 @@ nav {
 	  align-items: center;
 	  justify-content: space-around;
 	  margin-bottom: 50px;
+  }
+
+  .footer_menu a{
+	margin: 0 5px;
+	justify-content: center;
   }
 
   .footer a{
@@ -458,7 +457,6 @@ nav {
 		margin-top: 6vh;
 		font-size: 1.6em;
 		margin-bottom: 2vh;
-
 	}
 
 	.divAssPict {
@@ -671,4 +669,52 @@ nav {
 		details {
 			text-align: center;
 		}
+
+		.assosLinks {
+			display: flex;
+			flex-direction: column;			
+			margin-top: 2vh;
+			font-size: 1.6em;
+			margin-bottom: 2vh;
+		}
+
+		.secAssociations{
+			height: 80vh;		
+			background-color: rgb(200, 200, 200, .8);
+			padding: 10px;
+		}
+
+		.divAssPict {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			text-align: center;	
+			height: 300px;
+			width: 34%;	
+			margin-bottom: 2vh;	
+		}
+		
+		.secAction {
+			height: 2470px;
+		}
+}
+
+@media only screen and (max-width: 900px) {
+
+	.column .reseaux img{
+		width: 30px;
+		height: 30px;
+	}
+
+	.footer p{
+		font-size: 1.1em;
+	}
+
+	.footer a{
+		font-size: 1em;
+	}
+
+	.footer_haut{
+		display: flex;
+	}
 }
