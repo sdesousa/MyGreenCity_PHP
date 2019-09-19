@@ -91,6 +91,10 @@ nav {
 	height: 100%;
 }
 
+.menu_icon:hover {
+	opacity: 0.6;
+}
+
 .menu {
 	display: flex;
 	flex-direction: row;
