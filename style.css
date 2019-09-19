@@ -381,6 +381,7 @@ nav {
 	.secAction {
 		display: flex;
 		justify-content: space-between;
+		height: 700px;
 		margin: 20px;
 	}
 

@@ -19,7 +19,9 @@ html {
 }
 
 h1 {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: "Aquatico";
     color: rgb(51, 51, 51);
     height: 150px;
@@ -34,7 +36,7 @@ h2 {
     color: rgb(51, 51, 51);
     height: 120px;
     margin: 20px;
-    margin-top: 125px;
+    margin-top: 100px;
     font-size: 50px;
 }
     
