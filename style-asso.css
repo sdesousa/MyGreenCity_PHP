@@ -266,7 +266,7 @@ nav {
   .copyright{
 	  justify-content: flex-end;
 	  align-self: center;
-	  margin-top: 10px;
+	  margin-top: 6px;
   }
   
   .footer p{
@@ -409,8 +409,7 @@ nav {
     }
 }
 
-
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 880px) {
 
 	.footer_menu p{
 		display: flex;
@@ -427,5 +426,22 @@ nav {
 
 	.footer p{
 		align-items: center;
+	}
+
+	.column .reseaux{
+		flex-direction: column;
+	}
+
+	.column .reseaux a{
+		margin: 0;
+	}
+
+	.column{
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
+	.footer p, .footer a{
+		font-size: 1em;
 	}
 }
