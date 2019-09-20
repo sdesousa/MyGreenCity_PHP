@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Manjari";
+    font-family: "Polly";
 }
 
 body {
@@ -24,8 +24,8 @@ html {
 }
 
 @font-face {
-	font-family: "";
-	src: url("");
+	font-family: "Polly";
+	src: url("polices/PollyRounded-Regular.otf");
 }
 
 h1 {
@@ -352,7 +352,7 @@ nav {
 	}
 
 	.secCollecte {
-		height: 550px;
+		height: 650px;
 	}
 
 	.dechetsRefusText {
@@ -660,7 +660,7 @@ nav {
 		}
 
 		.secCollecte {
-			height: 850px;
+			height: 950px;
 		}
 
 		.pointsCollecte {
@@ -689,7 +689,7 @@ nav {
 		}
 
 		.secAssociations{
-			height: 80vh;		
+			height: 1250px;		
 			background-color: rgb(200, 200, 200, .8);
 			padding: 10px;
 		}
