@@ -547,6 +547,27 @@ nav {
 	.textConseils {
 		margin-bottom: 20px;
 	}
+
+	.secCollecte {
+		height: 900px;
+	}
+
+	.pointsCollecte {
+		flex-direction: column-reverse;
+		justify-content: space-evenly;
+		align-items: center;
+		height: 700px;
+		margin: 0;
+	}
+
+	.menuDeroulant {
+		align-items: center;
+		height: 300px;
+	}
+
+	details {
+		text-align: center;
+	}
 }
 
 @media only screen and (max-width: 961px) {
@@ -662,27 +683,6 @@ nav {
 		.green {
 			height: 40px;
 			font-size: 1.2em;
-		}
-
-		.secCollecte {
-			height: 900px;
-		}
-
-		.pointsCollecte {
-			flex-direction: column-reverse;
-			justify-content: space-evenly;
-			align-items: center;
-			height: 700px;
-			margin: 0;
-		}
-
-		.menuDeroulant {
-			align-items: center;
-			height: 300px;
-		}
-
-		details {
-			text-align: center;
 		}
 
 		.assosLinks {
