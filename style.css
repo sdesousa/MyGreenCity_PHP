@@ -741,11 +741,25 @@ nav {
 		display: none;
 	}
 
+	.column{
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
 	.column p{
 		display: none;
 	}
 
 	.footer p{
 		align-items: center;
+	}
+
+	.column .reseaux{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.column .reseaux a{
+		margin: 0;
 	}
 }
