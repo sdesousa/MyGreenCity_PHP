@@ -32,8 +32,8 @@ h1 {
     text-align: center;
     font-family: "Aquatico";
     color: rgb(51, 51, 51);
-    height: 150px;
     margin-top: 110px;
+    margin-bottom: 30px;
     font-size: 55px;
 }
 
@@ -182,6 +182,11 @@ nav {
 
 /* Section Content */
 
+.secInfo {
+    background: url("images/green_cup.png");
+    padding: 20px;
+}
+
 .divTextInformations {
     display: flex;
     align-items: center;
@@ -195,10 +200,25 @@ nav {
     list-style: none;
 }
 
+.Informations {
+    display: flex;
+    align-items: center;
+}
+
+.assoImg {
+    border: 4px solid green;
+    border-radius: 10px;
+}
+
+.description {
+    padding: 30px;
+}
+
 .textDescription {
     margin: 40px auto;
     width: 75%;
     line-height: 1.5rem;
+    font-size: 1.3rem;
 }
 
 
@@ -281,6 +301,31 @@ nav {
   .column .reseaux a{
 	  margin: 8px;
   }
+
+@media only screen and (max-width: 1108px) {
+
+	.column .reseaux img{
+		width: 30px;
+		height: 30px;
+	}
+
+	.footer p{
+		font-size: 1.1em;
+	}
+
+	.footer a{
+		font-size: 1.1em;
+	}
+
+	.footer_haut{
+		display: flex;
+    }
+
+    .Informations {
+        flex-direction: column;
+    }
+
+}
 
 @media only screen and (max-width: 961px) {
 
@@ -383,17 +428,4 @@ nav {
 	.footer p{
 		align-items: center;
 	}
-}
-
-.flex_asso {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.Informations {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
 }
