@@ -80,7 +80,7 @@ nav {
 	justify-content: space-between;
 	position: fixed;
 	top: 0;
-	width: 100%;
+	width: 100vw;
 	z-index: 2;
 }
 
@@ -343,6 +343,7 @@ nav {
 		justify-content: space-around;
 		margin-bottom: 15px;
 		font-size: 1.4em;
+		padding: 10px;
 	}
 
 	.conseilsDroite {
@@ -353,6 +354,10 @@ nav {
 
 	.secCollecte {
 		height: 550px;
+	}
+
+	.dechetsRefus {
+		padding: 10px;
 	}
 
 	.dechetsRefusText {
@@ -417,7 +422,7 @@ nav {
 /* Section Actions */
 
     .hrAction{
-	display: none;
+		display: none;
 	}
 
 	.divAction {
@@ -458,6 +463,7 @@ nav {
 		height: 700px;		
 		background: url("images/green_cup.png");
 		padding: 10px;
+		width: 100vw;
 	}
 
 	.assosLinks{
@@ -712,7 +718,7 @@ nav {
 		}
 }
 
-@media only screen and (max-width: 1108px) {
+@media only screen and (max-width: 1100px) {
 
 	.column .reseaux img{
 		width: 30px;
@@ -775,5 +781,96 @@ nav {
 
 	.footer p, .footer a{
 		font-size: 1em;
+	}
+}
+
+@media only screen and (max-width: 560px) {
+
+	.textConseils {
+		font-size: 1.2em;
+		padding: 10px;
+	}
+
+	.dechetsRefusText {
+		font-size: 1.2em;
+	}
+
+	.titleDechetsRefus {
+		font-size: 1.2em;
+	}
+
+	.menuDeroulant {
+		font-size: 1.2em;
+		width: 100vw;
+	}
+
+	.actitle {
+		height: 500px;
+	}
+
+	.actitleMobile {
+		height: 700px;
+	}
+
+	.secAction {
+		height: 2900px;
+	}
+
+	.assosLinks {
+		width: 100vw;
+	}
+
+	.divAssPict {
+		width: 100vw;
+	}
+}
+
+
+@media only screen and (max-width: 460px) {
+	.imgTrier {
+		height: 210px;
+		width: 300px;
+	}
+
+	.imgContainer {
+		height: 200px;
+		width: 300px;
+	}
+
+	.textConseils {
+		font-size: 1.2em;
+	}
+
+	.dechetsRefusText {
+		font-size: 1.2em;
+	}
+
+	.titleDechetsRefus {
+		font-size: 1.2em;
+	}
+
+	.menuDeroulant {
+		font-size: 1.2em;
+		width: 100vw;
+	}
+
+	.actitle {
+		height: 500px;
+	}
+
+	.actitleMobile {
+		height: 700px;
+	}
+
+	.secAction {
+		height: 2900px;
+	}
+
+	.assosLinks {
+		width: 100vw;
+	}
+
+	.divAssPict {
+		width: 100vw;
 	}
 }
