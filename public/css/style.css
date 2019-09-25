@@ -3,6 +3,9 @@
 
 :root {
 	--main_bg_color: rgb(245, 245, 245);
+	--primary_color: rgb(18, 150, 18);
+	--secondary_color: #424952;
+	--hover_color: #BBD8FF;
 }
 
 * {
@@ -46,7 +49,7 @@ h1 {
 
 .Green {
 	font-size: 1.2em;
-	color: rgb(18, 150, 18);
+	color: var(--primary_color);
 	font-family: "Rustico"
 }
 
@@ -66,7 +69,7 @@ h2::after {
 	width: 5rem;
 	display: block;
 	margin: 25px auto 1rem;
-	background: rgb(18, 150, 18);
+	background: var(--primary_color);
 }
 
 h3 {
@@ -112,7 +115,7 @@ h3 {
   
   .button button{
     border-radius: 12px 0 12px 0;
-    background: rgb(18, 150, 18);
+    background: var(--primary_color);
     border: none;
     cursor: pointer;
     font-size: 1.3em;

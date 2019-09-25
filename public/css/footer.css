@@ -1,7 +1,7 @@
 .footer{
-    background-color: #424952;
+    background-color: var(--secondary_color);
     height: 180px;
-    border-top: 15px solid rgb(18, 150, 18);
+    border-top: 15px solid var(--primary_color);
     display: flex;
     flex-direction: column;
     justify-content: center;
