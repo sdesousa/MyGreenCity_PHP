@@ -15,17 +15,17 @@ html {
 
 @font-face {
 	font-family: "Aquatico";
-	src: url("polices/Aquatico-Regular.otf");
+	src: url("fonts/Aquatico-Regular.otf");
 }
 
 @font-face {
 	font-family: "Rustico";
-	src: url("polices/Rustico-V2-Regular.otf");
+	src: url("fonts/Rustico-V2-Regular.otf");
 }
 
 @font-face {
 	font-family: "Polly";
-	src: url("polices/PollyRounded-Regular.otf");
+	src: url("fonts/PollyRounded-Regular.otf");
 }
 
 h1 {
