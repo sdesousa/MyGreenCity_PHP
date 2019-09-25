@@ -15,28 +15,59 @@
         <?php include 'header.php'; ?>
 
         <!-- Section Action -->
+
+        <?php
+            $actions = [
+                    'La mobilite' => [
+                        'images/logo-mobile.png',
+                        "L'ambition principale est de lutter contre l'usage de la voiture individuelle, qui représente actuellement 55% des déplacements des habitants de la métropole. Pour cela, plusieurs actions \"ont déjà été lancées comme la conversion de la flotte de bus au 100% électrique d'ici 2024, l'amélioration des franchissements de la Loire pour les piétons et les cyclistes avec notamment les travaux sur la RD2020.",
+                    ],
+                    'L\'accompagnement' => [
+                            'images/logo-accompagnement.png',
+                            "Il faut qu'on assure une montée en compétences des habitants et de l'ensemble des acteurs du territoire sur les questions de transition\", affirme Natacha Billet, directrice de l'environnement et des risques à Orléans Métropole. Ainsi, de la pédagogie sera faite pour accompagner les habitants dans le changement de leurs pratiques comme la réduction des déchets, le passage à une alimentation biologique et locale. La Métropole veut aussi créer un réseau de citoyens engagés pour le climat, soutenir le développement de l'économie circulaire...",
+                    ],
+                    'L\'urbanisme' => [
+                            'images/logo-urbanisme.png',
+                            "La notion de développement durable sera intégrée dans l'ensemble des projets et des documents de planification. Dans un premier temps, le plan climat déploiera le référentiel de la ville durable, un outil pratique de mises en oeuvre des politiques environnementales dans les projets urbains. Un autre objectif est aussi de développer l'agriculture urbaine et soutenir une alimentation locale biologique.",
+                    ],
+            ];
+            
+        ?>
 		<section class="secAction" id="link_actions">
             <h2> NOS ACTIONS </h2>
             <div class="divAction">
-				<div class="action">
-                    <img class="actionpict" src="images/logo-mobile.png" alt="Logo d'un bus">
-                        <p class="actitle">La mobilité <br>
-                            <span class="actdescrpt">L'ambition principale est de lutter contre l'usage de la voiture individuelle, qui représente actuellement 55% des déplacements des habitants de la métropole. Pour cela, plusieurs actions "ont déjà été lancées comme la conversion de la flotte de bus au 100% électrique d'ici 2024, l'amélioration des franchissements de la Loire pour les piétons et les cyclistes avec notamment les travaux sur la RD2020.</span></p>
-                </div>
-                <hr class="hrAction">
-                <div class="action" id="action2">        											
-					<img class="actionpict" src="images/logo-accompagnement.png" alt="Logo d'une poignée de main">
-                        <p class="actitle actitleMobile">L'accompagnement <br>
-                            <span class="actdescrpt">"Il faut qu'on assure une montée en compétences des habitants et de l'ensemble des acteurs du territoire sur les questions de transition", affirme Natacha Billet, directrice de l'environnement et des risques à Orléans Métropole. Ainsi, de la pédagogie sera faite pour accompagner les habitants dans le changement de leurs pratiques comme la réduction des déchets, le passage à une alimentation biologique et locale. La Métropole veut aussi créer un réseau de citoyens engagés pour le climat, soutenir le développement de l'économie circulaire...</span></p>
-                </div>
-                <div class="action"> 
-					<img class="actionpict" src="images/logo-urbanisme.png" alt="Logo d'un bâtiment">							
-						<p class="actitle">L'urbanisme <br>
-							<span class="actdescrpt">La notion de développement durable sera intégrée dans l'ensemble des projets et des documents de planification. Dans un premier temps, le plan climat déploiera le référentiel de la ville durable, un outil pratique de mises en oeuvre des politiques environnementales dans les projets urbains. Un autre objectif est aussi de développer l'agriculture urbaine et soutenir une alimentation locale biologique.</span></p>									
-				</div>
-                <hr class="hrAction">
-            </div>
+                <?php
+                    foreach($actions as $action => $description) {
+                    ?>
+                        <div class="action">
+                            <img class="actionpict" src=<?= $description[0] ?> alt= "Logo d'un bus">
+                            <p class="actitle"><?= $action ?> <br> <span class="actdescrpt"> <?= $description[1] ?> </span></p>
+                        </div>
+                        <hr class="hrAction">
+                    <?php
+                    }
+                    ?>
+                
+<!--				<div class="action">-->
+<!--                    <img class="actionpict" src="images/logo-mobile.png" alt="Logo d'un bus">-->
+<!--                        <p class="actitle">La mobilité <br>-->
+<!--                            <span class="actdescrpt">L'ambition principale est de lutter contre l'usage de la voiture individuelle, qui représente actuellement 55% des déplacements des habitants de la métropole. Pour cela, plusieurs actions "ont déjà été lancées comme la conversion de la flotte de bus au 100% électrique d'ici 2024, l'amélioration des franchissements de la Loire pour les piétons et les cyclistes avec notamment les travaux sur la RD2020.</span></p>-->
+<!--                </div>-->
+<!--                <hr class="hrAction">-->
+<!--                <div class="action" id="action2">        											-->
+<!--					<img class="actionpict" src="images/logo-accompagnement.png" alt="Logo d'une poignée de main">-->
+<!--                        <p class="actitle actitleMobile">L'accompagnement <br>-->
+<!--                            <span class="actdescrpt">"Il faut qu'on assure une montée en compétences des habitants et de l'ensemble des acteurs du territoire sur les questions de transition", affirme Natacha Billet, directrice de l'environnement et des risques à Orléans Métropole. Ainsi, de la pédagogie sera faite pour accompagner les habitants dans le changement de leurs pratiques comme la réduction des déchets, le passage à une alimentation biologique et locale. La Métropole veut aussi créer un réseau de citoyens engagés pour le climat, soutenir le développement de l'économie circulaire...</span></p>-->
+<!--                </div>-->
+<!--                <div class="action"> -->
+<!--					<img class="actionpict" src="images/logo-urbanisme.png" alt="Logo d'un bâtiment">							-->
+<!--						<p class="actitle">L'urbanisme <br>-->
+<!--							<span class="actdescrpt">La notion de développement durable sera intégrée dans l'ensemble des projets et des documents de planification. Dans un premier temps, le plan climat déploiera le référentiel de la ville durable, un outil pratique de mises en oeuvre des politiques environnementales dans les projets urbains. Un autre objectif est aussi de développer l'agriculture urbaine et soutenir une alimentation locale biologique.</span></p>									-->
+<!--				</div>-->
+<!--                <hr class="hrAction">-->
+               </div>
         </section>
+
          <!-- Section Associations -->
 		<section class="secAssociations" id="link_associations">
             <h2>ASSOCIATIONS</h2>
