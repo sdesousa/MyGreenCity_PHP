@@ -15,7 +15,6 @@
         <?php include 'header.php'; ?>
 
         <!-- Section Action -->
-
         <?php
             $actions = [
                     'La mobilite' => [
@@ -69,23 +68,80 @@
         </section>
 
          <!-- Section Associations -->
+
+        <?php
+            $associations =[
+                    'cen' => [
+                        'Conservatoire des espaces naturels Centre-Val de Loire',
+                        'asso/asso1.php',
+                        'images/asso1.jpg',
+                        'asso1Pict',
+                        [
+                            '3, rue de la lionne - 45000 Orléans',
+                            '02 38 77 02 72',
+                            '02 38 46 06 35',
+                            'siege.orleans@cen-centrevaldeloire.org',
+                            'www.cen-centrevaldeloire.org',
+                        ],
+                    ],
+                    'lne' => [
+                        'Loiret Nature Environnement',
+                        'asso/asso2.php',
+                        'images/asso2.jpg',
+                        'asso2Pict',
+                        [
+                            '64, Route d\'Olivet - 45100 Orléans',
+                            '02 38 56 69 84',
+                            '02 38 56 33 48',
+                            'asso@lne45.org',
+                            'www.loiret-nature-environnement.org',
+                        ],
+                    ],
+                    'lpb' => [
+                        'Les Paniers Bios',
+                        'asso/asso3.php',
+                        'images/asso3.jpg',
+                        'asso3Pict',
+                        [
+                            '27 bis rue des Ponts Chartrains - 41000 Blois',
+                            '02 54 74 16 83',
+                            '',
+                            'info@lespaniersbioduvaldeloire.fr',
+                            'www.lespaniersbioduvaldeloire.fr',
+                        ],
+                    ],
+            ];
+        ?>
+
 		<section class="secAssociations" id="link_associations">
             <h2>ASSOCIATIONS</h2>
-			<div class="assosLinks">				
-                <div class="divAssPict">
-                    <a href="asso1.html"><img class="asso1Pict" src="images/asso1.jpg" alt="Conservatoire d'espaces naturels région centre val de Loire"></a>
-                    <p class="assosNames">Conservatoire des espaces naturels<br> Centre-Val de Loire </p>
-                </div>
-                <div class="divAssPict">               
-                    <a href="asso2.html"><img class="asso2Pict" src="images/asso2.jpg" alt="Loiret Nature Environement"></a>
-                    <p class="assosNames">Loiret Nature Environnement</p>
-                    <p></p>
-                </div>
-                <div class="divAssPict"> 
-                    <a href="asso3.html"><img class="asso3Pict" src="images/asso3.jpg" alt="MNLE 45"></a>
-                    <p class="assosNames">Les Paniers Bios</p>
-                    <p></p>
-                </div>
+			<div class="assosLinks">
+
+                <?php foreach ($associations as $shortName => $info) {
+                    ?> <div class="divAssPict">
+                        <a href="<?= $info[1] ?>"><img class="<?= $info[3] ?>" src="<?= $info[2] ?>" alt="<?= $info[0] ?>"> </a>
+                        <p class="assosNames"> <?= $info[0] ?></p>
+                    </div>
+                <?php
+                }
+                ?>
+
+
+<!--                <div class="divAssPict">-->
+<!--                    <a href="asso/asso1.php"><img class="asso1Pict" src="images/asso1.jpg" alt="Conservatoire d'espaces naturels région centre val de Loire"></a>-->
+<!--                    <p class="assosNames">Conservatoire des espaces naturels<br> Centre-Val de Loire </p>-->
+<!--                </div>-->
+<!--                <div class="divAssPict">               -->
+<!--                    <a href="asso/asso2.php"><img class="asso2Pict" src="images/asso2.jpg" alt="Loiret Nature Environement"></a>-->
+<!--                    <p class="assosNames">Loiret Nature Environnement</p>-->
+<!--                    <p></p>-->
+<!--                </div>-->
+<!--                <div class="divAssPict"> -->
+<!--                    <a href="asso/asso3.php"><img class="asso3Pict" src="images/asso3.jpg" alt="MNLE 45"></a>-->
+<!--                    <p class="assosNames">Les Paniers Bios</p>-->
+<!--                    <p></p>-->
+<!--                </div>-->
+
 			</div>
 		</section>
 
