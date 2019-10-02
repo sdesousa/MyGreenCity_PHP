@@ -47,6 +47,12 @@ h1 {
     font-size: 55px;
 }
 
+.Green {
+    font-size: 1.2em;
+    color: var(--primary_color);
+    font-family: "Rustico"
+}
+
 h2 {	
 	text-align: center;
 	font-family: "Aquatico";

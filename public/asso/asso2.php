@@ -12,7 +12,8 @@
         <?php include '../header.php'; ?>
 
         <section>
-            <h1>Loiret Nature Environnement</h1>
+            <h1><?= $_GET['name']; ?></h1>
+
         </section>
 
         <section class="secInfo">
@@ -21,10 +22,10 @@
                 <div class="divTextInformations">
                     <ul class ="textInformations">
                         <li>Siège social</li>
-                        <li>64, Route d'Olivet - 45100 Orléans</li>
-                        <li>Télephone : 02 38 56 69 84 - Télécopie : 02 38 56 33 48</li>
-                        <li>Mail : asso@lne45.org</li>
-                        <li><a href="http://www.loiret-nature-environnement.org" target="_blank">www.loiret-nature-environnement.org</a></li>
+                        <li><?= $_GET['address']; ?></li>
+                        <li>Télephone : <?= $_GET['telephone']; ?> - Télécopie : <?= $_GET['fax']; ?></li>
+                        <li>Mail : <?= $_GET['mail']; ?></li>
+                        <li><a href="<?= $_GET['url']; ?>" target="_blank"><?= $_GET['url']; ?></a></li>
                     </ul>
                 </div>
                 <img class="assoImg" src="/images/asso2.jpg" alt="Logo Loiret Nature Environnement">

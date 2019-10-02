@@ -12,7 +12,8 @@
         <?php include '../header.php'; ?>
 
         <section>
-            <h1>Les Paniers Bios</h1>
+            <h1><?= $_GET['name']; ?></h1>
+
         </section>
 
         <section class="secInfo">
@@ -21,10 +22,10 @@
                 <div class="divTextInformations">
                     <ul class ="textInformations">
                         <li>Siège social</li>
-                        <li>27 bis rue des Ponts Chartrains - 41000 Blois</li>
-                        <li>Téléphone : 02 54 74 16 83</li>
-                        <li>Mail : info@lespaniersbioduvaldeloire.fr></li>
-                        <a href="https://www.lespaniersbioduvaldeloire.fr" target="_blank">www.lespaniersbioduvaldeloire.fr</a>
+                        <li><?= $_GET['address']; ?></li>
+                        <li>Télephone : <?= $_GET['telephone']; ?> - Télécopie : <?= $_GET['fax']; ?></li>
+                        <li>Mail : <?= $_GET['mail']; ?></li>
+                        <li><a href="<?= $_GET['url']; ?>" target="_blank"><?= $_GET['url']; ?></a></li>
                     </ul>
                 </div>
                 <img class="assoImg" src="/images/asso3.jpg" alt="Logo Les Paniers Bios">

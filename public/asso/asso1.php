@@ -12,7 +12,8 @@
         <?php include '../header.php'; ?>
 
         <section>
-            <h1>Conservatoire d'espaces naturels Centre-Val de Loire</h1>
+            <h1><?= $_GET['name']; ?></h1>
+
         </section>
 
         <section class="secInfo">
@@ -21,10 +22,10 @@
                 <div class="divTextInformations">
                     <ul class ="textInformations">
                         <li>Siège social</li>
-                        <li>3, rue de la lionne - 45000 Orléans</li>
-                        <li>Télephone : 02 38 77 02 72 - Télécopie : 02 38 46 06 35</li>
-                        <li>Mail : siege.orleans@cen-centrevaldeloire.org</li>
-                        <li><a href="https://www.cen-centrevaldeloire.org" target="_blank">www.cen-centrevaldeloire.org</a></li>
+                        <li><?= $_GET['address']; ?></li>
+                        <li>Télephone : <?= $_GET['telephone']; ?> - Télécopie : <?= $_GET['fax']; ?></li>
+                        <li>Mail : <?= $_GET['mail']; ?></li>
+                        <li><a href="<?= $_GET['url']; ?>" target="_blank"><?= $_GET['url']; ?></a></li>
                     </ul>
                 </div>
                 <img class="assoImg" src="/images/asso1.jpg" alt="Logo Conservatoire d'espaces naturels région centre val de Loire">

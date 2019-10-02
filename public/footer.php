@@ -1,3 +1,5 @@
+<?php include 'variables.php'; ?>
+
 <footer class="footer">
     <div class="footer_haut">
         <div class="column">

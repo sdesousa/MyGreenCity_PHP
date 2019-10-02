@@ -11,27 +11,17 @@
         <link rel="icon" type="image/png" href="images/green-v2.png" />
     </head>
     <body>
+
+
+
         <!-- Header / nav -->
-        <?php include 'header.php'; ?>
+        <?php
+        require 'variables.php';
+        include 'header.php';
+        ?>
 
         <!-- Section Action -->
-        <?php
-            $actions = [
-                    'La mobilite' => [
-                        'images/logo-mobile.png',
-                        "L'ambition principale est de lutter contre l'usage de la voiture individuelle, qui représente actuellement 55% des déplacements des habitants de la métropole. Pour cela, plusieurs actions \"ont déjà été lancées comme la conversion de la flotte de bus au 100% électrique d'ici 2024, l'amélioration des franchissements de la Loire pour les piétons et les cyclistes avec notamment les travaux sur la RD2020.",
-                    ],
-                    'L\'accompagnement' => [
-                            'images/logo-accompagnement.png',
-                            "Il faut qu'on assure une montée en compétences des habitants et de l'ensemble des acteurs du territoire sur les questions de transition\", affirme Natacha Billet, directrice de l'environnement et des risques à Orléans Métropole. Ainsi, de la pédagogie sera faite pour accompagner les habitants dans le changement de leurs pratiques comme la réduction des déchets, le passage à une alimentation biologique et locale. La Métropole veut aussi créer un réseau de citoyens engagés pour le climat, soutenir le développement de l'économie circulaire...",
-                    ],
-                    'L\'urbanisme' => [
-                            'images/logo-urbanisme.png',
-                            "La notion de développement durable sera intégrée dans l'ensemble des projets et des documents de planification. Dans un premier temps, le plan climat déploiera le référentiel de la ville durable, un outil pratique de mises en oeuvre des politiques environnementales dans les projets urbains. Un autre objectif est aussi de développer l'agriculture urbaine et soutenir une alimentation locale biologique.",
-                    ],
-            ];
-            
-        ?>
+
 		<section class="secAction" id="link_actions">
             <h2> NOS ACTIONS </h2>
             <div class="divAction">
@@ -69,58 +59,24 @@
 
          <!-- Section Associations -->
 
-        <?php
-            $associations =[
-                    'cen' => [
-                        'Conservatoire des espaces naturels Centre-Val de Loire',
-                        'asso/asso1.php',
-                        'images/asso1.jpg',
-                        'asso1Pict',
-                        [
-                            '3, rue de la lionne - 45000 Orléans',
-                            '02 38 77 02 72',
-                            '02 38 46 06 35',
-                            'siege.orleans@cen-centrevaldeloire.org',
-                            'www.cen-centrevaldeloire.org',
-                        ],
-                    ],
-                    'lne' => [
-                        'Loiret Nature Environnement',
-                        'asso/asso2.php',
-                        'images/asso2.jpg',
-                        'asso2Pict',
-                        [
-                            '64, Route d\'Olivet - 45100 Orléans',
-                            '02 38 56 69 84',
-                            '02 38 56 33 48',
-                            'asso@lne45.org',
-                            'www.loiret-nature-environnement.org',
-                        ],
-                    ],
-                    'lpb' => [
-                        'Les Paniers Bios',
-                        'asso/asso3.php',
-                        'images/asso3.jpg',
-                        'asso3Pict',
-                        [
-                            '27 bis rue des Ponts Chartrains - 41000 Blois',
-                            '02 54 74 16 83',
-                            '',
-                            'info@lespaniersbioduvaldeloire.fr',
-                            'www.lespaniersbioduvaldeloire.fr',
-                        ],
-                    ],
-            ];
-        ?>
 
 		<section class="secAssociations" id="link_associations">
             <h2>ASSOCIATIONS</h2>
 			<div class="assosLinks">
 
-                <?php foreach ($associations as $shortName => $info) {
+                <?php foreach ($associations as $shortName => $informations) {
                     ?> <div class="divAssPict">
-                        <a href="<?= $info[1] ?>"><img class="<?= $info[3] ?>" src="<?= $info[2] ?>" alt="<?= $info[0] ?>"> </a>
-                        <p class="assosNames"> <?= $info[0] ?></p>
+                        <a href="<?= 'asso.php?name=' . $informations['name']
+                            .'&address=' . $informations['address']
+                            .'&telephone=' . $informations['telephone']
+                            . '&fax=' . $informations['fax']
+                            . '&mail=' . $informations['mail']
+                            . '&url=' . $informations['url']
+                            . '&logo=' . $informations['logo']
+                            . '&shortName=' . $shortName ?>">
+                            <img class="<?= $informations['classLogo'] ?>" src="<?= $informations['logo'] ?>" alt="<?= $informations['name'] ?>">
+                        </a>
+                        <p class="assosNames"> <?= $informations['name'] ?></p>
                     </div>
                 <?php
                 }
@@ -202,29 +158,8 @@
 
         <hr>
         <!-- Section Formulaire -->
-        
-        <section>
-            <h2>CONTACT</h2>
-            <form method="post">
-                <div  class="form">
-                    <div class="name">
-                        <label for="name">NOM</label>
-                        <input type="text" id="name" name="user_name">                    
-                    </div>
-                    <div class="email">  
-                        <label for="mail">EMAIL</label>          
-                        <input type="email" id="mail" name="user_mail">
-                    </div>
-                    <div class="textarea">
-                        <label for="msg">MESSAGE</label>
-                        <textarea id="msg" name="user_message"></textarea>                        
-                    </div>   
-                </div>
-                <div  class="button">
-                    <button type="submit">Envoyer</button>
-                </div>
-            </form>
-        </section>
+
+        <?php include 'form.php'; ?>
 
         <!-- Footer -->
         <?php include 'footer.php'; ?>
