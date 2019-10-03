@@ -85,6 +85,18 @@ h3 {
 
 /* Section Formulaire */
 
+.formulaire {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 60px;
+}
+
+.field {
+	width: 60%;
+	border-radius: 10px;
+	background-color: white;
+}
+
   .form {
     display: flex;
     justify-content: center;
@@ -319,6 +331,33 @@ h3 {
 	.assosNamesMid{
 		margin-top: 2vh;
 	}
+
+	.formRedirect {
+		text-align: center;
+		font-family: "Aquatico";
+		color: var(--secondary_color);;
+		height: 2rem;
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-bottom: 120px;
+		margin-top: 120px;
+		font-size: 2rem;
+	}
+
+	.errorList {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.errorListElement {
+		list-style-type: square;
+		font-style: italic;
+		color: darkred;
+		font-size: 1.5rem;
+	}
+
+
 
 @media only screen and (max-width: 1300px) {
 

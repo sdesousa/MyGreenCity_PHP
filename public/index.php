@@ -11,17 +11,51 @@
         <link rel="icon" type="image/png" href="images/green-v2.png" />
     </head>
     <body>
-
-
-
         <!-- Header / nav -->
         <?php
-        require 'variables.php';
+
+        require '../src/variables.php';
+        require '../src/functions.php';
+
+        $trimmed =[];
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $errors = [];
+            $trimmed = trimArray($_POST);
+            if (empty($trimmed['firstname'])) {
+                $errors['firstnameMissing'] = "Error firstname missing";
+            }
+            if (empty($trimmed['lastname'])) {
+                $errors['lastnameMissing'] = "Error lastname missing";
+            }
+            if (empty($trimmed['mail'])) {
+                $errors['mailMissing'] = "Error email missing";
+            }
+            if (!filter_var($trimmed['mail'], FILTER_VALIDATE_EMAIL)) {
+                $errors['mailInvalid'] = "Error email invalid";
+            }
+
+            if (strlen($trimmed['firstname']) > 20) {
+                $errors['firstnameTooLong'] = "Error firstname too long";
+            }
+
+            if (strlen($trimmed['lastname']) > 20) {
+                $errors['lastnameSizeTooLong'] = "Error lastname too long";
+            }
+
+            if (count($errors) == 0) {
+                $trimmed = cleanHtml($trimmed);
+                header("Location: formRedirect.php");
+                exit();
+            }
+        }
+
         include 'header.php';
+
         ?>
-
+        <div class="superposition">
+            <h1> MY <span class="Green">Green</span> CITY </h1>
+        </div>
         <!-- Section Action -->
-
 		<section class="secAction" id="link_actions">
             <h2> NOS ACTIONS </h2>
             <div class="divAction">
@@ -36,7 +70,6 @@
                     <?php
                     }
                     ?>
-                
 <!--				<div class="action">-->
 <!--                    <img class="actionpict" src="images/logo-mobile.png" alt="Logo d'un bus">-->
 <!--                        <p class="actitle">La mobilité <br>-->
@@ -56,14 +89,10 @@
 <!--                <hr class="hrAction">-->
                </div>
         </section>
-
          <!-- Section Associations -->
-
-
 		<section class="secAssociations" id="link_associations">
             <h2>ASSOCIATIONS</h2>
 			<div class="assosLinks">
-
                 <?php foreach ($associations as $shortName => $informations) {
                     ?> <div class="divAssPict">
                         <a href="<?= 'asso.php?name=' . $informations['name']
@@ -100,7 +129,6 @@
 
 			</div>
 		</section>
-
 	    <!-- Gestion des déchets -->
 		<section class="gestionDechets" id="link_dechets">
             <h2>GESTION DES DECHETS</h2>
@@ -155,10 +183,8 @@
                 <img class="imgContainer" src="images/container.jpg" alt="Conteneur de décheterie">
             </div>
         </section>
-
         <hr>
         <!-- Section Formulaire -->
-
         <?php include 'form.php'; ?>
 
         <!-- Footer -->

@@ -16,7 +16,7 @@
     ];
 
     $associations = [
-        'cen' => [
+        'CEN' => [
             'name' => 'Conservatoire des espaces naturels Centre-Val de Loire',
             'logo' => '/images/asso1.jpg',
             'classLogo' => 'asso1Pict',
@@ -27,7 +27,7 @@
             'url' => 'www.cen-centrevaldeloire.org',
             'abbreviation' => 'CEN',
         ],
-        'lne' => [
+        'LNE' => [
             'name' => 'Loiret Nature Environnement',
             'logo' => '/images/asso2.jpg',
             'classLogo' => 'asso2Pict',
@@ -38,7 +38,7 @@
             'url' => 'www.loiret-nature-environnement.org',
             'abbreviation' => 'LNE',
         ],
-        'lpb' => [
+        'LPB' => [
             'name' => 'Les Paniers Bios',
             'logo' => '/images/asso3.jpg',
             'classLogo' => 'asso3Pict',
@@ -52,18 +52,18 @@
     ];
 
     $descriptionsAsso = [
-        'cen' => [
+        'CEN' => [
             'paragraph1' => "Structure d’initiative citoyenne, consensuelle et professionnelle, le Conservatoire permet, grâce au soutien de plusieurs partenaires convaincus de l'intérêt de sa démarche, de compléter les mesures réglementaires à une échelle plus fine, et plus adaptée aux différents contextes locaux.",
             'paragraph2' => "Après 20 ans d'action, le Conservatoire d'espaces naturels Centre-Val de Loire protège un réseau d'une centaine de sites protégés, répartis sur près de 3 500 hectares en région Centre-Val de Loire.",
         ],
 
-        'lne' => [
+        'LNE' => [
             'paragraph1' => "Créée en 1946 sous le nom des \"Naturalistes Orléanais\", Loiret Nature Environnement est une association de loi 1901.",
             'paragraph2' => "Elle a pour but de: Mieux connaitre pour mieux préserver, Eduquer à l'environnement pour sensibiliser un large public et Agir pour plus d'éco-citoyenneté.",
             'paragraph3' => "Pour agir l'association compte environ 600 adhérents, 6 groupes thématiques (ornithologie, géologie, botanique, mycologie, zero pesticide/eau/agriculture, reserve naturel) et une equipe pluridisciplinaire de permanents et de bénévoles actifs.",
         ],
 
-        'lpb' => [
+        'LPB' => [
             'paragraph1' => "Créée en 2000, l'association Val Bio Centre vise a developper une agriculture bio locale, commercialiser des produits bio de qualité en circuit-court, soutenir l'économie sociale et solidaire et organiser des formation collectives.",
             'paragraph2' => "Elle regroupe 50 producteurs de fruits et légumes biologique de la région Centre - Val de loire, plus de 40 fermes familiales bio, un etablissement et service d'aide par le travail et un partenariat avec des structures de l'economie sociale et solidaire.",
         ],
