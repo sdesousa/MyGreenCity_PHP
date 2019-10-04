@@ -33,11 +33,6 @@ html {
 	src: url("../fonts/Rustico-V2-Regular.otf");
 }
 
-@font-face {
-	font-family: "";
-	src: url("");
-}
-
 h1 {
 	font-size: 8em;
 	font-weight: bolder;
@@ -210,7 +205,7 @@ h3 {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		width: 700px;
+		width: 100%;
 		font-size: 1.4em;
 	}
 
@@ -224,7 +219,6 @@ h3 {
 
 	.imgContainer {
 		height: 400px;
-		width: 600px;
 		border-radius: 5px;
 	}
 
@@ -288,7 +282,8 @@ h3 {
 		height: 700px;		
 		background: url("../images/green_cup.png");
 		padding: 10px;
-		width: 100vw;
+		width: 100%;
+		margin-top: 120px;
 	}
 
 	.assosLinks{
@@ -382,6 +377,25 @@ h3 {
 		font-size: 1.5rem;
 	}
 
+	.field:valid {
+		border: 5px solid #ddffdd;
+	}
+	.field:invalid {
+		border: 5px solid #ffdddd;
+	}
+	.input:valid {
+		background-color: #ddffdd;
+	}
+	.input:invalid {
+		background-color: #ffdddd;
+	}
+	input:required {
+		border-color: #800000;
+		border-width: 3px;
+	}
+	input:required:valid {
+		border-color: #008000;
+	}
 
 @media only screen and (max-width: 1300px) {
 
@@ -478,7 +492,7 @@ h3 {
 		background-color: var(--secondary_color);
 		top: 30px;
 		left: 30px;
-		width: calc(100vw - 30px - 30px);
+		width: calc(100% - 30px - 30px);
 		height: 120px;
 		justify-content: space-between;
 		align-items: center;
@@ -525,7 +539,7 @@ h3 {
 		background-color: var(--secondary_color);
 		top: 30px;
 		left: 30px;
-		width: calc(100vw - 30px - 30px) ;
+		width: calc(100% - 30px - 30px) ;
 		height: 150px;
 		justify-content: space-between;
 		align-items: center;
@@ -537,7 +551,7 @@ h3 {
 		position:fixed;
 		top: 0;
 		left: 30px;
-		width: calc(100vw - 30px - 30px);
+		width: calc(100% - 30px - 30px);
 		height: 30px;
 		background: rgba(80, 80, 80, .8);
 		z-index: 2;
@@ -649,6 +663,29 @@ h3 {
 	}
 }
 
+@media only screen and (max-width: 600px) {
+
+	.imgContainer {
+		height: 300px;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+
+	.imgContainer {
+		height: 275px;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+
+	.imgContainer {
+		height: 200px;
+	}
+}
+
+
+
 @media only screen and (max-width: 560px) {
 
 	.textConseils {
@@ -666,7 +703,7 @@ h3 {
 
 	.menuDeroulant {
 		font-size: 1.2em;
-		width: 100vw;
+		width: 100%;
 	}
 
 	.actitle {
@@ -682,11 +719,11 @@ h3 {
 	}
 
 	.assosLinks {
-		width: 100vw;
+		width: 100%;
 	}
 
 	.divAssPict {
-		width: 100vw;
+		width: 100%;
 	}
 }
 
@@ -694,11 +731,6 @@ h3 {
 @media only screen and (max-width: 460px) {
 	.imgTrier {
 		height: 210px;
-		width: 300px;
-	}
-
-	.imgContainer {
-		height: 200px;
 		width: 300px;
 	}
 
@@ -716,7 +748,7 @@ h3 {
 
 	.menuDeroulant {
 		font-size: 1.2em;
-		width: 100vw;
+		width: 100%;
 	}
 
 	.actitle {
@@ -732,10 +764,10 @@ h3 {
 	}
 
 	.assosLinks {
-		width: 100vw;
+		width: 100%;
 	}
 
 	.divAssPict {
-		width: 100vw;
+		width: 100%;
 	}
 }
