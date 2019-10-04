@@ -13,7 +13,11 @@
 
     <body>
 
-        <?php include 'header.php'; ?>
+
+        <?php
+        require '../src/variables.php';
+        include 'header.php';
+        ?>
 
         <h2 class="formRedirect"> Your form has been received !</h2>
 

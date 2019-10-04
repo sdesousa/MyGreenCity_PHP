@@ -2,7 +2,7 @@
     <h2>CONTACT</h2>
 
     <form class='formulaire' action='' method="POST">
-        <fieldset class="field">
+        <fieldset class="fieldButton">
             <div class="checkbox">
                 <label for="activeCheckbox">Remove REQUIRED</label>
                 <input type="checkbox" id="activeCheckbox" name="activeCheckbox" <?php if($activeCheckbox) echo 'CHECKED'; ?>>
@@ -16,15 +16,15 @@
             <div  class="form">
                 <div class="name">
                     <label for="firstname">PRENOM:</label>
-                    <input type="text" id="firstname" name="firstname" autocomplete placeholder="John" <?php if(isset($_POST['firstname'])) echo 'value="' . $_POST['firstname'] . '"';?> REQUIRED >
+                    <input type="text" id="firstname" name="firstname" autocomplete placeholder="John" <?php if(isset($_POST['firstname'])) echo 'value="' . $_POST['firstname'] . '"';?> >
                 </div>
                 <div class="name">
                     <label for="lastname">NOM:</label>
-                    <input type="text" id="lastname" name="lastname" autocomplete placeholder="Doe" <?php if(isset($_POST['lastname'])) echo 'value="' . $_POST['lastname'] . '"';?> REQUIRED >
+                    <input type="text" id="lastname" name="lastname" autocomplete placeholder="Doe" <?php if(isset($_POST['lastname'])) echo 'value="' . $_POST['lastname'] . '"';?> >
                 </div>
                 <div class="email">
                     <label for="mail">EMAIL:</label>
-                    <input type="email" id="mail" name="mail" autocomplete placeholder="johndoe@gmail.com" <?php if(isset($_POST['mail'])) echo 'value="' . $_POST['mail'] . '"';?> REQUIRED >
+                    <input type="text" id="mail" name="mail" autocomplete placeholder="johndoe@gmail.com" <?php if(isset($_POST['mail'])) echo 'value="' . $_POST['mail'] . '"';?> >
                 </div>
                 <div class="textarea">
                     <label for="msg">MESSAGE:</label>

@@ -95,6 +95,14 @@ h3 {
 	width: 60%;
 	border-radius: 10px;
 	background-color: white;
+	border-color: var(--primary_color);
+}
+
+.fieldButton {
+	width: 60%;
+	border-radius: 10px;
+	background-color: white;
+	border-color: darkred;
 }
 
   .form {
@@ -332,6 +340,23 @@ h3 {
 		margin-top: 2vh;
 	}
 
+	.checkbox {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		align-items: center;
+		align-content: center;
+		margin: 5px;
+	}
+
+	.checkbox label {
+		margin: 5px;
+	}
+
+	.checkbox input {
+		margin: 5px;
+	}
+
 	.formRedirect {
 		text-align: center;
 		font-family: "Aquatico";
@@ -356,7 +381,6 @@ h3 {
 		color: darkred;
 		font-size: 1.5rem;
 	}
-
 
 
 @media only screen and (max-width: 1300px) {

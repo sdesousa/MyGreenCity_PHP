@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
-        <title>My Green City</title>
-        <meta name="author" content="Noms" >
-        <meta name="description" content="Description">
-        <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Manjari" rel="stylesheet">
-        <link rel="icon" type="image/png" href="images/green-v2.png" />
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+    <title>My Green City</title>
+    <meta name="author" content="Noms">
+    <meta name="description" content="Description">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Manjari" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/green-v2.png"/>
+</head>
     <body>
         <!-- Header / nav -->
         <?php
@@ -17,8 +17,15 @@
         require '../src/variables.php';
         require '../src/functions.php';
 
+        $activeCheckbox = false;
+        if (($_SERVER['REQUEST_METHOD'] === 'POST') && (isset($_POST['activeCheckbox']))) {
+            $activeCheckbox = $_POST['activeCheckbox'];
+        } else {
+            $activeCheckbox = false;
+        }
+
         $trimmed =[];
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (($_SERVER['REQUEST_METHOD'] === 'POST') && (isset($_POST['submit']))) {
             $errors = [];
             $trimmed = trimArray($_POST);
             if (empty($trimmed['firstname'])) {
@@ -27,18 +34,14 @@
             if (empty($trimmed['lastname'])) {
                 $errors['lastnameMissing'] = "Error lastname missing";
             }
-            if (empty($trimmed['mail'])) {
-                $errors['mailMissing'] = "Error email missing";
-            }
             if (!filter_var($trimmed['mail'], FILTER_VALIDATE_EMAIL)) {
-                $errors['mailInvalid'] = "Error email invalid";
+                $errors['mailInvalid'] = "Error email missing or invalid";
             }
-
-            if (strlen($trimmed['firstname']) > 20) {
+            if (strlen($trimmed['firstname']) > 40) {
                 $errors['firstnameTooLong'] = "Error firstname too long";
             }
 
-            if (strlen($trimmed['lastname']) > 20) {
+            if (strlen($trimmed['lastname']) > 40) {
                 $errors['lastnameSizeTooLong'] = "Error lastname too long";
             }
 
@@ -185,7 +188,15 @@
         </section>
         <hr>
         <!-- Section Formulaire -->
-        <?php include 'form.php'; ?>
+
+        <?php $includeForm = 'form.php'; ?>
+        <?php if (($_SERVER['REQUEST_METHOD'] === 'POST') && (isset($_POST['submitCheckbox']))) {
+            if ($_POST['submitCheckbox']) {
+                $includeForm = 'formUnrequired.php';
+            }
+        } ?>
+
+        <?php include $includeForm; ?>
 
         <!-- Footer -->
         <?php include 'footer.php'; ?>
