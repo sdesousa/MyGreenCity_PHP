@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
@@ -10,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Manjari" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/green-v2.png"/>
 </head>
+
 <body>
-<!-- Header / nav -->
 <?php
 require '../src/variables.php';
 require '../src/functions.php';
@@ -50,6 +51,9 @@ if (($_SERVER['REQUEST_METHOD'] === 'POST') && (isset($_POST['submit']))) {
     }
 }
 
+?>
+<!-- Header / nav -->
+<?php
 require 'header.php';
 
 ?>
@@ -58,6 +62,7 @@ require 'header.php';
 </div>
 
 <!-- Section Action -->
+<!--actions are stocked in an array $actions in variables.php-->
 <section class="secAction" id="link_actions">
     <h2> NOS ACTIONS </h2>
     <div class="divAction">

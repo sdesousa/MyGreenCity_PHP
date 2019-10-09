@@ -304,7 +304,7 @@ h3 {
 		width: 30%;		
 	}
 
-	.asso1Pict {
+	.asso1Pict, .asso2Pict, .asso3Pict {
 		height: 200px;
 		width: 300px;
 		border: 4px solid green;
@@ -312,20 +312,6 @@ h3 {
 		padding-bottom: 20px;
 		padding-top: 20px;
 		background-color: white;
-	}
-
-	.asso2Pict {
-		height: 200px;
-		width: 300px;
-		border: 4px solid green;	
-		border-radius: 10px;
-		background-color: white;		
-	}
-	.asso3Pict {
-		height: 200px;
-		width: 300px;
-		border: 4px solid green;	
-		border-radius: 10px;			
 	}
 
 	.assosNames{
@@ -377,12 +363,6 @@ h3 {
 		font-size: 1.5rem;
 	}
 
-	.field:valid {
-		border: 5px solid #ddffdd;
-	}
-	.field:invalid {
-		border: 5px solid #ffdddd;
-	}
 	.input:valid {
 		background-color: #ddffdd;
 	}
