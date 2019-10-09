@@ -8,4 +8,5 @@
 out
 gen
 asso.sql
+!/connec/
 !/connec/connec.php
