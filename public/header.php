@@ -1,4 +1,10 @@
-<?php include '../src/variables.php'; ?>
+<?php
+require_once '../connec/connec.php';
+require_once '../src/functions.php';
+
+$associations = selectAllAssociations();
+
+?>
 
 <header>
     <nav>
@@ -14,17 +20,11 @@
     </nav>
     <div class="sub_menu_asso" id="sub_menu">
         <a class="close" href="#"> <img src="images/Close_icon.png" alt="close"> </a>
-        <a href="#link_associations">Les associations </a>
-            <?php foreach ($associations as $associationList => $associationInfo) {
-                ?> <a href="<?= 'asso.php?name=' . $associations[$associationList]['name']
-                .'&address=' . $associations[$associationList]['address']
-                .'&telephone=' . $associations[$associationList]['telephone']
-                . '&fax=' . $associations[$associationList]['fax']
-                . '&mail=' . $associations[$associationList]['mail']
-                . '&url=' . $associations[$associationList]['url']
-                . '&logo=' . $associations[$associationList]['logo']
-                . '&shortName=' . $associations[$associationList]['abbreviation'] ?>">
-                <?= $associations[$associationList]['abbreviation'] ?> </a>
+        <a href="index.php#link_associations">Les associations </a>
+            <?php foreach ($associations as $association) {
+                ?> <a href="<?= 'asso.php?id=' . $association['id'] ?>">
+                    <?= $association['abbreviation'] ?>
+                </a>
             <?php } ?>
     </div>
 </header>

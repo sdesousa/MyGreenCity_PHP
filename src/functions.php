@@ -13,3 +13,11 @@ function cleanHtml(array $toClean) {
     }
     return $clean;
 }
+
+function selectAllAssociations (): array {
+    $pdo = new \PDO(DSN, USER, PASS);
+    $query = "SELECT * FROM association";
+    $statement = $pdo->query($query);
+    $associations = $statement->fetchAll(PDO::FETCH_ASSOC);
+    return $associations;
+}

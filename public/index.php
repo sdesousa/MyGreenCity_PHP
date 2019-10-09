@@ -14,8 +14,9 @@
 
 <body>
 <?php
-require '../src/variables.php';
-require '../src/functions.php';
+require_once '../src/variables.php';
+require_once '../src/functions.php';
+require_once '../connec/connec.php';
 
 $activeCheckbox = false;
 if (($_SERVER['REQUEST_METHOD'] === 'POST') && (isset($_POST['activeCheckbox']))) {
@@ -51,6 +52,8 @@ if (($_SERVER['REQUEST_METHOD'] === 'POST') && (isset($_POST['submit']))) {
     }
 }
 
+$associations = selectAllAssociations();
+
 ?>
 <!-- Header / nav -->
 <?php
@@ -84,21 +87,14 @@ require 'header.php';
 <section class="secAssociations" id="link_associations">
     <h2>ASSOCIATIONS</h2>
     <div class="assosLinks">
-        <?php foreach ($associations as $shortName => $informations) {
+        <?php foreach ($associations as $association) {
             ?>
             <div class="divAssPict">
-                <a href="<?= 'asso.php?name=' . $informations['name']
-                . '&address=' . $informations['address']
-                . '&telephone=' . $informations['telephone']
-                . '&fax=' . $informations['fax']
-                . '&mail=' . $informations['mail']
-                . '&url=' . $informations['url']
-                . '&logo=' . $informations['logo']
-                . '&shortName=' . $shortName ?>">
-                    <img class="<?= $informations['classLogo'] ?>" src="<?= $informations['logo'] ?>"
-                         alt="<?= $informations['name'] ?>">
+                <a href="<?= 'asso.php?id=' . $association['id']?>">
+                    <img class="assoPict" src="<?= $association['logo'] ?>"
+                         alt="<?= $association['name'] ?>">
                 </a>
-                <p class="assosNames"> <?= $informations['name'] ?></p>
+                <p class="assosNames"> <?= $association['name'] ?></p>
             </div>
             <?php
         }
