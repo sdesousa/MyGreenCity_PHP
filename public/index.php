@@ -86,6 +86,9 @@ require 'header.php';
 <!-- Section Associations -->
 <section class="secAssociations" id="link_associations">
     <h2>ASSOCIATIONS</h2>
+    <div class = linkUD>
+        <a href="add.php" >Ajouter une association</a>
+    </div>
     <div class="assosLinks">
         <?php foreach ($associations as $association) {
             ?>

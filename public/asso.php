@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<?php
-include 'header.php';
-?>
 
 <head>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
-    <title>My Green City - <?= $_GET['name']; ?></title>
+    <title>My Green City - <?= $_GET['id']; ?></title>
     <link rel="stylesheet" href="css/style-asso.css">
     <link href="https://fonts.googleapis.com/css?family=Manjari" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/green-v2.png" />
 </head>
 
 <body>
+
+<?php
+include 'header.php';
+?>
+
 <?php
 require_once '../connec/connec.php';
 
