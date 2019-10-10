@@ -39,12 +39,13 @@ html {
 }
 
 h1 {
+    display:none;
+    font-size: 60px;
+    font-weight: bolder;
+    font-style: oblique;
     text-align: center;
     font-family: "Aquatico";
     color: rgb(51, 51, 51);
-    margin-top: 110px;
-    margin-bottom: 30px;
-    font-size: 55px;
 }
 
 .Green {
@@ -53,11 +54,23 @@ h1 {
     font-family: "Rustico"
 }
 
+.superposition {
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 765px;
+    background: url("../images/greenbanner.jpg	") no-repeat center;
+    background-size: cover;
+}
+
 h2 {	
 	text-align: center;
 	font-family: "Aquatico";
 	color: rgb(51, 51, 51);
-	height: 120px;
+	/*height: 120px;*/
 	margin: 20px;
 	margin-top: 90px;
 	font-size: 50px;
@@ -146,95 +159,30 @@ h2::after {
 
 @media only screen and (max-width: 961px) {
 
-
-    .menu_icon_link {
-        width: 30px;
+    .superposition {
+        display: inline-block;
+        position: fixed;
+        top: 0;
+        left: 30px;
+        width: calc(100% - 30px - 30px);
         height: 30px;
+        background: rgba(80, 80, 80, .8);
+        z-index: 2;
     }
 
-    .menu_icon {
-        width: 30px;
-        height: 30px;
-    }
-
-    .menu, .close {
-        display: none;
-    }
-
-    .burger {
-        width: 30px;
-        height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .burger img {
+    h1 {
+        display: block;
         width: 100%;
         height: 100%;
+        font-size: 1.2em;
+        font-weight: bolder;
+        text-align: center;
     }
 
-    .menu:target {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        background-color: var(--secondary_color);
-        top: 30px;
-        left: 30px;
-        width: calc(100vw - 30px - 30px);
-        height: 120px;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 2;
-
+    .green {
+        height: 40px;
+        font-size: 1.2em;
     }
-    .close_burger:first-child {
-        display: flex;
-        width: 100%;
-    }
-
-    .close_burger img {
-        display: flex;
-        position: absolute;
-        top: 0;
-        left: calc(50% - 15px);
-        width: 30px;
-        height: 30px;
-        z-index: 2;
-    }
-
-    .close img {
-        position: absolute;
-        top: 0px;
-        left: calc(50% - 15px);
-        width: 30px;
-        height: 30px;
-        z-index: 2;
-    }
-
-    .sub_menu_asso {
-        display: none;
-    }
-
-    .sub_menu_asso a, .menu a {
-        font-family: "Aquatico";
-        font-size: 1rem;
-    }
-
-    .sub_menu_asso:target {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        background-color: var(--secondary_color);
-        top: 30px;
-        left: 30px;
-        width: calc(100vw - 30px - 30px) ;
-        height: 150px;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 2;
-    }
-
 
     .superposition {
         position:fixed;

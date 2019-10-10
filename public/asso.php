@@ -30,12 +30,11 @@ $association = $statement->fetch(PDO::FETCH_ASSOC);
 
 ?>
 
+<div class="superposition">
+    <h1> MY <span class="Green">Green</span> CITY </h1>
+</div>
 
-
-
-<section>
-    <h1><?= $association['name']; ?></h1>
-</section>
+<h2><?= $association['name']; ?></h2>
 
 <section class="secInfo">
     <h2>INFORMATIONS</h2>

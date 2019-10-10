@@ -42,6 +42,19 @@ h1 {
 	z-index: 1;
 }
 
+
+.superposition {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 765px;
+	background: url("../images/greenbanner.jpg	") no-repeat center;
+	background-size: cover;
+}
+
 .Green {
 	font-size: 1.2em;
 	color: var(--primary_color);
@@ -261,7 +274,7 @@ h3 {
 	.divAction {
 		display: flex;
 		justify-content: space-between;
-		height: 700px;
+		/*height: 700px;*/
 		margin: 20px;
 	}
 
@@ -293,7 +306,6 @@ h3 {
 	}
 
 	.secAssociations{
-		height: 700px;		
 		background: url("../images/green_cup.png");
 		padding: 10px;
 		width: 100%;
@@ -302,6 +314,7 @@ h3 {
 
 	.assosLinks{
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-around;
 		align-items: center;
 		margin-top: 6vh;
@@ -313,9 +326,11 @@ h3 {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		width: 30%;
 		text-align: center;	
 		height: 300px;
-		width: 30%;		
+		width: 30%;
+		margin-bottom: 40px;
 	}
 
 	.assoPict {
@@ -404,7 +419,7 @@ h3 {
 	}
 
 	.secAction {
-		height: 1500px;
+		/*height: 1500px;*/
 	}
 
 	.divAction {
@@ -457,98 +472,8 @@ h3 {
 
 @media only screen and (max-width: 961px) {
 
-
-	.menu_icon_link {
-		width: 30px;
-		height: 30px;
-	}
-
-	.menu_icon {
-		width: 30px;
-		height: 30px;
-	}
-
-	.menu, .close {
-		display: none;
-	}
-
-	.burger {
-		width: 30px;
-		height: 30px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.burger img {
-		width: 100%;
-		height: 100%;
-	}
-
-	.menu:target {
-		display: flex;
-		flex-direction: column;
-		position: fixed;
-		background-color: var(--secondary_color);
-		top: 30px;
-		left: 30px;
-		width: calc(100% - 30px - 30px);
-		height: 120px;
-		justify-content: space-between;
-		align-items: center;
-		z-index: 2;
-
-	}
-	.close_burger:first-child {
-		display: flex;
-		width: 100%;
-	}
-
-	.close_burger img {
-		display: flex;
-		position: absolute;
-		top: 0;
-		left: calc(50% - 15px);
-		width: 30px;
-		height: 30px;
-		z-index: 2;
-	}
-
-	.close img {
-		position: absolute;
-		top: 0px;
-		left: calc(50% - 15px);
-		width: 30px;
-		height: 30px;
-		z-index: 2;
-	}
-
-	.sub_menu_asso {
-		display: none;
-	}
-
-	.sub_menu_asso a, .menu a {
-		font-family: "Aquatico";
-		font-size: 1rem;
-	}
-
-	.sub_menu_asso:target {
-		display: flex;
-		flex-direction: column;
-		position: fixed;
-		background-color: var(--secondary_color);
-		top: 30px;
-		left: 30px;
-		width: calc(100% - 30px - 30px) ;
-		height: 150px;
-		justify-content: space-between;
-		align-items: center;
-		z-index: 2;
-	}
-
-
 	.superposition {
-		position:fixed;
+		position: fixed;
 		top: 0;
 		left: 30px;
 		width: calc(100% - 30px - 30px);
@@ -579,7 +504,7 @@ h3 {
 	}
 
 	.secAssociations{
-		height: 1250px;
+		/*height: 1250px;*/
 	}
 
 	.divAssPict {
@@ -593,7 +518,7 @@ h3 {
 	}
 
 	.secAction {
-		height: 2470px;
+		/*height: 2470px;*/
 	}
 }
 
@@ -621,7 +546,7 @@ h3 {
 	}
 
 	.secAction {
-		height: 2350px;
+		/*height: 2350px;*/
 	}
 
 }
@@ -715,7 +640,7 @@ h3 {
 	}
 
 	.secAction {
-		height: 2900px;
+		/*height: 2900px;*/
 	}
 
 	.assosLinks {
@@ -760,7 +685,7 @@ h3 {
 	}
 
 	.secAction {
-		height: 2900px;
+		/*height: 2900px;*/
 	}
 
 	.assosLinks {

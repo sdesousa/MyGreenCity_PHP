@@ -19,10 +19,10 @@ $associations = selectAllAssociations();
 
     </nav>
     <div class="sub_menu_asso" id="sub_menu">
-        <a class="close" href="#"> <img src="images/Close_icon.png" alt="close"> </a>
-        <a href="index.php#link_associations">Les associations </a>
+        <a class="sub_menu_asso_close" href="#"> <img src="images/Close_icon.png" alt="close"> </a>
+        <a class="sub_menu_asso_index" href="index.php#link_associations">Les associations </a>
             <?php foreach ($associations as $association) {
-                ?> <a href="<?= 'asso.php?id=' . $association['id'] ?>">
+                ?> <a class="sub_menu_asso_links" href="<?= 'asso.php?id=' . $association['id'] ?>">
                     <?= $association['abbreviation'] ?>
                 </a>
             <?php } ?>
