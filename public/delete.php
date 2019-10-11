@@ -16,15 +16,16 @@
 <?php
 require_once '../connec/connec.php';
 
-$id = $_GET['id'];
-$pdo = new \PDO(DSN, USER, PASS);
-$query = 'DELETE FROM association WHERE id=:id;';
-$prep = $pdo->prepare($query);
-$prep->bindValue(':id', $id, PDO::PARAM_INT);
-$prep->execute();
-header("Location: index.php");
-exit();
-
+if($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $id = $_POST['id'];
+    $pdo = new \PDO(DSN, USER, PASS);
+    $query = 'DELETE FROM association WHERE id=:id;';
+    $prep = $pdo->prepare($query);
+    $prep->bindValue(':id', $id, PDO::PARAM_INT);
+    $prep->execute();
+    header("Location: index.php");
+    exit();
+}
 ?>
 
 </html>

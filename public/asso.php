@@ -38,11 +38,15 @@ $association = $statement->fetch(PDO::FETCH_ASSOC);
 
 <section class="secInfo">
     <h2>INFORMATIONS</h2>
-    <div class = linkUD>
-        <a href="update.php?id=<?= $id ?>" >Modifier l'association</a>
-        <a href="delete.php?id=<?= $id ?>" >Supprimer l'association</a>
-    </div>
-    <div class="Informations">
+    <form class="linkUDasso" action="update.php" method="POST">
+        <input name="id" type="hidden" value="<?= $id ?> "/>
+        <button class="buttonCRUD" >Modifier une association</button>
+    </form>
+    <form class="linkUDasso" action="delete.php" method="POST">
+        <input name="id" type="hidden" value="<?= $id ?> "/>
+        <button class="buttonCRUD" >Supprimer une association</button>
+    </form>
+<div class="Informations">
         <div class="divTextInformations">
             <ul class ="textInformations">
                 <li>Siège social</li>

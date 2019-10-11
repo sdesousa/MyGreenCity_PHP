@@ -86,9 +86,9 @@ require 'header.php';
 <!-- Section Associations -->
 <section class="secAssociations" id="link_associations">
     <h2>ASSOCIATIONS</h2>
-    <div class = linkUD>
-        <a href="add.php" >Ajouter une association</a>
-    </div>
+    <form class = linkUD action="add.php">
+        <input class="buttonCRUD" type="submit" value="Ajouter une association" />
+    </form>
     <div class="assosLinks">
         <?php foreach ($associations as $association) {
             ?>
@@ -109,13 +109,7 @@ require 'header.php';
 <?php require 'gestion.php' ?>
 
 <!-- Section Formulaire -->
-<?php $includeForm = 'form.php'; ?>
-<?php if (($_SERVER['REQUEST_METHOD'] === 'POST') && (isset($_POST['submitCheckbox']))) {
-    if ($_POST['submitCheckbox']) {
-        $includeForm = 'formUnrequired.php';
-    }
-} ?>
-<?php require $includeForm; ?>
+<?php require 'form.php' ?>
 
 <!-- Footer -->
 <?php require 'footer.php'; ?>

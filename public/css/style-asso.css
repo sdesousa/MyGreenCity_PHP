@@ -127,11 +127,20 @@ h2::after {
     font-size: 1.3rem;
 }
 
-.linkUD {
+.linkUDasso {
     text-align: center;
-    margin-bottom: 60px;
-
+    margin-bottom: 20px;
 }
+
+.buttonCRUD {
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: var(--primary_color);
+    height: 40px;
+    width: 300px;
+    font-size: 1.2em;
+}
+
 @media only screen and (max-width: 1108px) {
 
     .column .reseaux img{

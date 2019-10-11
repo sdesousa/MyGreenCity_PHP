@@ -353,7 +353,15 @@ h3 {
 	.linkUD {
 		text-align: center;
 		margin-bottom: 60px;
+	}
 
+	.buttonCRUD {
+		border-radius: 5px;
+		border-width: 2px;
+		border-color: var(--primary_color);
+		height: 40px;
+		width: 300px;
+		font-size: 1.2em;
 	}
 
 	.checkbox {
@@ -376,7 +384,7 @@ h3 {
 	.formRedirect {
 		text-align: center;
 		font-family: "Aquatico";
-		color: var(--secondary_color);;
+		color: var(--secondary_color);
 		height: 2rem;
 		margin-left: 20px;
 		margin-right: 20px;

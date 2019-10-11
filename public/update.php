@@ -18,15 +18,17 @@ include 'header.php';
 require_once '../src/functions.php';
 require_once '../connec/connec.php';
 
-$id = $_GET['id'];
-$pdo = new \PDO(DSN, USER, PASS);
-$query = "SELECT * FROM association WHERE id=:id";
-$statement = $pdo->prepare($query);
-$statement->bindValue(':id', $id, PDO::PARAM_INT);
-$statement->execute();
-$association = $statement->fetch(PDO::FETCH_ASSOC);
+if($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $id = $_POST['id'];
+    $pdo = new \PDO(DSN, USER, PASS);
+    $query = "SELECT * FROM association WHERE id=:id";
+    $statement = $pdo->prepare($query);
+    $statement->bindValue(':id', $id, PDO::PARAM_INT);
+    $statement->execute();
+    $association = $statement->fetch(PDO::FETCH_ASSOC);
+}
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (($_SERVER['REQUEST_METHOD'] === 'POST') && (isset($_POST['submitModif']))) {
     $formSubmission = array_map('trim', $_POST);
     $errors = errorCheckAssociation($formSubmission);
 
@@ -57,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <form class='formulaireAsso' action='' method="POST">
     <fieldset class="field">
-        <legend>Ajouter une association</legend>
+        <legend>Modifier une association</legend>
         <div  class="form">
             <div class="fieldAsso">
                 <label for="name">NAME:</label>
@@ -98,7 +100,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         </div>
         <div  class="button">
-            <button type="submit" id="submit" name="submit" value="sent">Envoyer</button>
+            <input name="id" type="hidden" value="<?= $id ?> "/>
+            <button type="submit" id="submit" name="submitModif">Envoyer</button>
         </div>
 
         <?php

@@ -1,16 +1,6 @@
 <section id = 'link_contact'>
     <h2>CONTACT</h2>
 
-    <form class='formulaire' action='' method="POST">
-        <fieldset class="field">
-            <div class="checkbox">
-                <label for="activeCheckbox">Remove REQUIRED</label>
-                <input type="checkbox" id="activeCheckbox" name="activeCheckbox" <?php if($activeCheckbox) echo 'CHECKED'; ?>>
-                <button type="submit" id="submitCheckbox" name="submitCheckbox" value="sentCheckbox">Send</button>
-            </div>
-        </fieldset>
-    </form>
-
     <form class='formulaire' action='#link_contact' method="POST">
         <fieldset class="field">
             <div  class="form">
